@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { TLinkProps } from "./ButtonLink";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export default function LinkToSocialMedia({ icon }: TLinkProps) {
+type TFont = {
+  icon: IconProp;
+};
+
+export default function LinkToSocialMedia({ icon }: TFont) {
   return <FontAwesomeIcon icon={icon} color="white" />;
 }
