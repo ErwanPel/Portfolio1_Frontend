@@ -13,6 +13,9 @@ const categorySlice = createSlice({
   name: "category",
   initialState: initialState,
   reducers: {
+    goToHome: (state: TChoice) => {
+      state.choice = null;
+    },
     goToAboutMe: (state: TChoice) => {
       state.choice = "about Me";
     },
@@ -32,6 +35,7 @@ const categorySlice = createSlice({
 });
 
 export const {
+  goToHome,
   goToAboutMe,
   goToContacts,
   goToCourse,

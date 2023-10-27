@@ -9,6 +9,7 @@ export default {
         lgBorder: "#83CDC1",
         lgElementSeparator: "#53B9AB",
         lgText: "#008573",
+        lgButton: "#12A594",
       },
     },
   },
