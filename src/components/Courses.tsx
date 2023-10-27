@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Courses() {
   return (
     <motion.div className="text-3xl border-t-2 bg-lgBackgroundElement border-lgBorder ">
-      <p>Contact</p>
+      <p>Courses</p>
     </motion.div>
   );
 }
