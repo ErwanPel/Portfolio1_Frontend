@@ -39,7 +39,7 @@ export default function NavMenu() {
     >
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToHome())}
       >
         Home
@@ -47,7 +47,7 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToAboutMe())}
       >
         About Me
@@ -55,7 +55,7 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToProjects())}
       >
         Projects
@@ -64,7 +64,7 @@ export default function NavMenu() {
 
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToCourse())}
       >
         Courses
@@ -72,7 +72,7 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToResources())}
       >
         Resources
@@ -80,7 +80,7 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgText  text-xl w-60   py-6`}
+        className={`text-lgTextMin  text-xl w-60   py-6`}
         onClick={() => dispatch(goToContacts())}
       >
         Contacts

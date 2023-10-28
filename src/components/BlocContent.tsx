@@ -48,7 +48,7 @@ export default function BlocContent() {
             stiffness: 55,
           },
         }}
-        className="w-2/3 bg-red-500"
+        className="w-2/3 "
       >
         <AboutMe />
       </motion.section>
