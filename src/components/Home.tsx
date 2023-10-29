@@ -6,7 +6,7 @@ import Title from "./Title";
 export default function Home() {
   return (
     <div className="p-4">
-      <Title title="Home" />
+      <Title title="< Home />" />
       <div className="flex justify-between items-center">
         <div>
           <p className="text-3xl mb-4 text-lgTextMin">Hello, I'm</p>

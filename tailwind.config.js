@@ -7,6 +7,7 @@ export default {
         lgBackground: "#F3FBF9",
         lgSubBackground: "#E0F8F3",
         lgBackgroundElement: "#CCF3EA",
+        lgHoverBackgroundElement: "#CCF3EA",
         lgBorder: "#83CDC1",
         lgElementSeparator: "#53B9AB",
         lgTextMin: "#008573",

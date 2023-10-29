@@ -10,18 +10,20 @@ import sass from "../../public/sass.webp";
 import nodeJs from "../../public/nodeJs.webp";
 import mongoDB from "../../public/mongoDB.webp";
 import github from "../../public/github.webp";
+import next from "../../public/next.png";
 
 export default function AboutMe() {
   return (
-    <div className="p-4 my-12 ">
-      <Title title="About Me" />
+    <div className="p-4 my-12">
+      <Title title="< About Me />" />
       <article>
         <p className="text-justify mb-4 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
-          Hello ! Je m'appelle Erwan Pellerin et je suis développeur Full-Stack
-          Web et Mobile junior. J'ai exercé le métier de psychomotricien durant
-          8 ans au sein de structures médico-sociaux, un métier nécessitant de
-          la curiosité, de l'adaptation, de la créativité, une gestion du stress
-          ainsi qu'une bonne qualité d'écoute et d'observation.
+          Hello ! Je m'appelle Erwan Pellerin et je suis{" "}
+          <strong>développeur Full-Stack Web et Mobile junior</strong>. J'ai
+          exercé le métier de psychomotricien durant 8 ans au sein de structures
+          médico-sociaux, un métier nécessitant de la curiosité, de
+          l'adaptation, de la créativité, une gestion du stress ainsi qu'une
+          bonne qualité d'écoute et d'observation.
         </p>
         <p className="text-lg text-justify text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
           Je suis passionné par l'informatique et les nouvelles technologies
@@ -29,21 +31,27 @@ export default function AboutMe() {
           autodidacte, le goût pour la programmation m'a engagé sur la voie de
           la reconversion professionnelle. Je me suis inscris au sein du club{" "}
           <a href="https://coder-pour-changer-de-vie.com/formations/">
-            Vivre du Code en Janvier 2023
+            <strong className="hover:underline underline-offset-2 decoration-2">
+              Vivre du Code
+            </strong>{" "}
+            en Janvier 2023
           </a>{" "}
           et je me suis formé à l'école du{" "}
           <a href="https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20reacteur&utm_content=377851505166&gad_source=1&gclid=Cj0KCQjw4vKpBhCZARIsAOKHoWTYa_na93HBD-c9K8ShKsObl08sLxYvEoh9e-yT-Qiic6t9RXcSxbQaAhLBEALw_wcB">
-            Réacteur d'Avril à Octobre 2023
+            <strong className="hover:underline underline-offset-2 decoration-2">
+              Réacteur
+            </strong>{" "}
+            d'Avril à Octobre 2023
           </a>
           . Ce bootcamp m'a permis d'obtenir de solides compétences en tant que
           développeur Full-Stack Web et Mobile.
         </p>
       </article>
       <article className="mt-16">
-        <h2 className="text-center text-3xl text-lgTextMax mb-8">Skills</h2>
+        <h2 className="text-center text-3xl text-lgTextMax m-8">Skills</h2>
         <div className="flex justify-between">
           <div>
-            <h3 className="mb-6 text-lgTextMin">Design</h3>
+            <h3 className="mb-6 text-lgTextMin font-bold ">Design</h3>
             <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
               <ImageTechno
                 source={penpot}
@@ -54,7 +62,7 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin">Langages</h3>
+            <h3 className="mb-6 text-lgTextMin font-bold">Langages</h3>
             <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
               <ImageTechno
                 source={html}
@@ -83,7 +91,7 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin">Front-End</h3>
+            <h3 className="mb-6 text-lgTextMin font-bold">Front-End</h3>
             <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
               <ImageTechno
                 source={react}
@@ -103,10 +111,16 @@ export default function AboutMe() {
                 color="bg-pink-400"
                 name="SASS"
               />
+              <ImageTechno
+                source={next}
+                alt="logo de Next"
+                color="bg-white"
+                name="Next 12/13"
+              />
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin">Back-End</h3>
+            <h3 className="mb-6 text-lgTextMin font-bold">Back-End</h3>
             <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
               <ImageTechno
                 source={nodeJs}
@@ -117,13 +131,13 @@ export default function AboutMe() {
               <ImageTechno
                 source={mongoDB}
                 alt="logo de MongoDB"
-                color="bg-green-300"
+                color="bg-yellow-600"
                 name="MongoDB"
               />
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin">Tools</h3>
+            <h3 className="mb-6 text-lgTextMin font-bold">Tools</h3>
             <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
               <ImageTechno
                 source={github}
