@@ -11,10 +11,11 @@ import nodeJs from "../../public/nodeJs.webp";
 import mongoDB from "../../public/mongoDB.webp";
 import github from "../../public/github.webp";
 import next from "../../public/next.png";
+import tailwind from "../../public/tailwind.webp";
 
 export default function AboutMe() {
   return (
-    <div className="p-4 my-12">
+    <div>
       <Title title="< About Me />" />
       <article>
         <p className="text-justify mb-4 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
@@ -110,6 +111,12 @@ export default function AboutMe() {
                 alt="logo de Sass"
                 color="bg-pink-400"
                 name="SASS"
+              />
+              <ImageTechno
+                source={tailwind}
+                alt="logo de Tailwind"
+                color="bg-blue-200"
+                name="TailWind/ NativeWind"
               />
               <ImageTechno
                 source={next}

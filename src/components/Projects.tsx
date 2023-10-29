@@ -3,25 +3,15 @@ import {
   faAngleDown,
   faAngleRight,
   faAngleLeft,
+  faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
-import vinted from "../../public/vinted.png";
-import marvel from "../../public/marvel.png";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { arrayProjects } from "../data/projectsArray";
 import { useState } from "react";
 import Title from "./Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-type TProjects = {
-  name: string;
-  id: number;
-  picture: string;
-};
-
-const arrayProjects: TProjects[] = [
-  { name: "Vinted", id: 0, picture: vinted },
-  { name: "Marvel", id: 1, picture: marvel },
-  { name: "GiveMovies", id: 2, picture: vinted },
-  { name: "SnakeVs", id: 3, picture: vinted },
-];
+import ButtonLink from "./ButtonLink";
+import ImageTechno from "./ImageTechno";
 
 export default function Projects() {
   const [nameProjects, setNameProjects] = useState<string | null>(null);
@@ -59,7 +49,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="p-4 my-12 flex flex-col items-center relative">
+    <div className="flex flex-col items-center relative">
       <Title title="< Projects >" />
       <p className="text-justify mb-8 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl ">
         Ici vous pouvez voir quelques projets que j'ai crées durant la
@@ -68,7 +58,7 @@ export default function Projects() {
         l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes
         créations.
       </p>
-      <p className="text-xl text-lgTextMin">Tu peux me déplacer</p>
+      <p className="text-xl text-lgTextMin">Je peux être déplacé</p>
       <FontAwesomeIcon icon={faAngleDown} className="text-lgTextMin" />
       <article className="mt-4">
         <div className="flex flex-wrap justify-center items-center  gap-x-4 h-64 w-60 border border-lgElementSeparator border-dashed absolute rounded-tr-3xl rounded-bl-3xl left-[200px] top-82">
@@ -79,6 +69,12 @@ export default function Projects() {
         </div>
         <motion.nav
           drag
+          dragConstraints={{
+            left: -200,
+            right: 500,
+            top: -450,
+            bottom: 1200,
+          }}
           className="flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-x-4 h-64 w-60 mx-auto border relative border-lgElementSeparator rounded-tr-3xl rounded-bl-3xl bg-lgBackgroundElement"
         >
           {arrayProjects.map((img) => {
@@ -104,8 +100,8 @@ export default function Projects() {
             );
           })}
         </motion.nav>
-        <section>
-          <nav className="flex justify-between items-center mt-10">
+        <section className="flex flex-col">
+          <nav className="flex justify-around items-center border-t border-lgElementSeparator mt-24 pt-10">
             <button onClick={() => changePage("left")}>
               <FontAwesomeIcon
                 icon={faAngleLeft}
@@ -122,16 +118,48 @@ export default function Projects() {
               />
             </button>
           </nav>
-          <figure className="mt-10 h-[400px] w-full rounded-lg border shadow-2xl">
+          <figure className="mt-10 self-center w-fit h-[500px] rounded-lg shadow-2xl">
             <img
-              className="object-cover w-full h-full rounded-lg"
+              className="object-contain w-full h-full rounded-lg"
               src={projects.picture}
               alt={`photo du projet ${projects.name}`}
             />
           </figure>
-          <nav>github + url</nav>
-          <article>Stack</article>
-          <p>description</p>
+          <article className="border-2 border-lgTextMax rounded-full p-4 flex items-center justify-around mt-10">
+            {projects.stacks.map((stack) => {
+              return (
+                <ImageTechno
+                  source={stack.source}
+                  alt={stack.alt}
+                  color={stack.color}
+                  name={stack.name}
+                />
+              );
+            })}
+          </article>
+
+          <p className="text-justify m-8 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
+            {projects.description}
+          </p>
+          <nav className="flex mt-6 justify-center gap-x-4">
+            {projects.github.map((git) => {
+              return (
+                <ButtonLink
+                  key={git.link}
+                  icon={faGithub}
+                  link={git.link}
+                  name={git.type}
+                />
+              );
+            })}
+            {projects.urlLink && (
+              <ButtonLink
+                icon={faArrowUpRightFromSquare}
+                link={projects.urlLink}
+                name={projects.urlLink}
+              />
+            )}
+          </nav>
           <p>video</p>
         </section>
       </article>

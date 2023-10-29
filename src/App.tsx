@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <main className=" w-screen bg-lgBackground">
-        <div className=" flex items-center justify-between px-8 container w-[1024px] min-h-screen mx-auto overflow-hidden">
+        <div className=" flex items-start justify-between px-8 container w-[1024px] min-h-screen mx-auto overflow-hidden py-32">
           <AnimatePresence>
             <BlocContent />
           </AnimatePresence>
