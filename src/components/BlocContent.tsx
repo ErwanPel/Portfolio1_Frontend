@@ -82,7 +82,7 @@ export default function BlocContent() {
             stiffness: 55,
           },
         }}
-        className="w-2/3 bg-red-500"
+        className="w-2/3"
       >
         <Courses />
       </motion.section>
@@ -99,7 +99,7 @@ export default function BlocContent() {
             stiffness: 55,
           },
         }}
-        className="w-2/3 bg-red-500"
+        className="w-2/3 "
       >
         <Resources />
       </motion.section>

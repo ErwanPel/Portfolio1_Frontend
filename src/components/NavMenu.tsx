@@ -10,8 +10,11 @@ import {
   goToCourse,
 } from "../features/category/category";
 import SeparatorMenu from "./SeparatorMenu";
+import { useSelector } from "react-redux";
+import { RootState } from "../features/store";
 
 export default function NavMenu() {
+  const { choice } = useSelector((store: RootState) => store.category);
   const dispatch: AppDispatch = useDispatch();
 
   const navVariant = {
@@ -26,8 +29,8 @@ export default function NavMenu() {
   };
 
   const buttonVariant = {
-    hidden: { x: 1000 },
-    show: { x: 0, transition: { type: "spring", stiffness: 50 } },
+    hidden: { y: 1000 },
+    show: { y: 0, transition: { type: "spring", stiffness: 40 } },
   };
 
   return (
@@ -35,11 +38,15 @@ export default function NavMenu() {
       variants={navVariant}
       initial="hidden"
       animate="show"
-      className="flex overflow-hidden flex-col items-center justify-center bg-lgBackgroundElement w-60 border-2 rounded-3xl border-lgBorder "
+      className="flex overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 rounded-3xl border-lgBorder "
     >
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === null
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32 py-6 hover:bg-lgHoverBackgroundElement `
+        }
         onClick={() => dispatch(goToHome())}
       >
         Home
@@ -47,7 +54,11 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === "about Me"
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+        }
         onClick={() => dispatch(goToAboutMe())}
       >
         About Me
@@ -55,7 +66,11 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === "projects"
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+        }
         onClick={() => dispatch(goToProjects())}
       >
         Projects
@@ -64,7 +79,11 @@ export default function NavMenu() {
 
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === "courses"
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+        }
         onClick={() => dispatch(goToCourse())}
       >
         Courses
@@ -72,7 +91,11 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === "resources"
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+        }
         onClick={() => dispatch(goToResources())}
       >
         Resources
@@ -80,7 +103,11 @@ export default function NavMenu() {
       <SeparatorMenu />
       <motion.button
         variants={buttonVariant}
-        className={`text-lgTextMin  text-xl w-60   py-6`}
+        className={
+          choice === "contacts"
+            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+        }
         onClick={() => dispatch(goToContacts())}
       >
         Contacts

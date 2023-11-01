@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  faAngleDown,
   faAngleRight,
   faAngleLeft,
   faArrowUpRightFromSquare,
@@ -25,18 +24,18 @@ export default function Projects() {
     if (direction === "left") {
       if (id === 0) {
         setID(() => 3);
-        setProjects(arrayProjects[id]);
+        setProjects(arrayProjects[3]);
       } else {
         setID((prev) => prev - 1);
-        setProjects(arrayProjects[id]);
+        setProjects(arrayProjects[id - 1]);
       }
     } else {
       if (id === 3) {
         setID(() => 0);
-        setProjects(arrayProjects[id]);
+        setProjects(arrayProjects[0]);
       } else {
         setID((prev) => prev + 1);
-        setProjects(arrayProjects[id]);
+        setProjects(arrayProjects[id + 1]);
       }
     }
   };
@@ -48,34 +47,36 @@ export default function Projects() {
     }
   };
 
+  console.log(id, projects);
+
   return (
     <div className="flex flex-col items-center relative">
       <Title title="< Projects >" />
-      <p className="text-justify mb-8 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl ">
+      <p className="text-justify  text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl ">
         Ici vous pouvez voir quelques projets que j'ai crées durant la
         formation. En plus des fonctionnalités de l'application, je m'attache à
         intégrer des concepts qui me semblent indispensables comme
         l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes
         créations.
       </p>
-      <p className="text-xl text-lgTextMin">Je peux être déplacé</p>
-      <FontAwesomeIcon icon={faAngleDown} className="text-lgTextMin" />
+
       <article className="mt-4">
-        <div className="flex flex-wrap justify-center items-center  gap-x-4 h-64 w-60 border border-lgElementSeparator border-dashed absolute rounded-tr-3xl rounded-bl-3xl left-[200px] top-82">
-          <figure className="h-24 w-24 border border-lgElementSeparator border-dashed"></figure>
-          <figure className="h-24 w-24 border border-lgElementSeparator border-dashed"></figure>
-          <figure className="h-24 w-24 border border-lgElementSeparator border-dashed"></figure>
-          <figure className="h-24 w-24 border border-lgElementSeparator border-dashed"></figure>
-        </div>
         <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              delay: 2,
+            },
+          }}
           drag
           dragConstraints={{
-            left: -200,
-            right: 500,
-            top: -450,
-            bottom: 1200,
+            left: 0,
+            right: 950,
+            top: -200,
+            bottom: 100,
           }}
-          className="flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-x-4 h-64 w-60 mx-auto border relative border-lgElementSeparator rounded-tr-3xl rounded-bl-3xl bg-lgBackgroundElement"
+          className="flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6 border-lgElementSeparator rounded-3xl rounded-bl-3xl bg-lgBackgroundElement left-6 top-[200px] "
         >
           {arrayProjects.map((img) => {
             return (
@@ -84,7 +85,7 @@ export default function Projects() {
                 onClick={() => changeProject(img.id)}
                 onMouseEnter={() => setNameProjects(img.name)}
                 onMouseLeave={() => setNameProjects(null)}
-                className="rounded-xl hover:cursor-pointer h-24 w-24 border border-lgElementSeparator"
+                className="rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator"
               >
                 {nameProjects === img.name ? (
                   <div className="bg-black rounded-xl opacity-80 w-full h-full flex justify-center items-center">
@@ -101,7 +102,7 @@ export default function Projects() {
           })}
         </motion.nav>
         <section className="flex flex-col">
-          <nav className="flex justify-around items-center border-t border-lgElementSeparator mt-24 pt-10">
+          <nav className="flex justify-around items-center border-t border-lgElementSeparator mt-12 pt-10">
             <button onClick={() => changePage("left")}>
               <FontAwesomeIcon
                 icon={faAngleLeft}
@@ -125,7 +126,7 @@ export default function Projects() {
               alt={`photo du projet ${projects.name}`}
             />
           </figure>
-          <article className="border-2 border-lgTextMax rounded-full p-4 flex items-center justify-around mt-10">
+          <article className="border-2 border-lgTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 mt-10">
             {projects.stacks.map((stack) => {
               return (
                 <ImageTechno

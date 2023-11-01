@@ -1,4 +1,3 @@
-import NavMenu from "./components/NavMenu";
 import BlocContent from "./components/BlocContent";
 import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
@@ -8,12 +7,11 @@ function App() {
   return (
     <>
       <Header />
-      <main className=" w-screen bg-lgBackground">
-        <div className=" flex items-start justify-between px-8 container w-[1024px] min-h-screen mx-auto overflow-hidden py-32">
+      <main className=" w-screen bg-lgBackground ">
+        <div className=" flex items-start justify-center px-8  min-h-screen mx-auto overflow-hidden py-12">
           <AnimatePresence>
             <BlocContent />
           </AnimatePresence>
-          <NavMenu />
         </div>
       </main>
       <Footer />

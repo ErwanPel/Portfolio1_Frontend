@@ -1,15 +1,15 @@
-import vinted from "../../public/vinted.png";
-import marvel from "../../public/marvel.png";
-import giveMovies from "../../public/giveMovies.png";
-import snake from "../../public/snakeVsEvilSnake.png";
-import tailwind from "../../public/tailwind.webp";
-import typescript from "../../public/Typescript.webp";
-import python from "../../public/Python.webp";
-import react from "../../public/react.webp";
-import sass from "../../public/sass.webp";
-import nodeJs from "../../public/nodeJs.webp";
-import mongoDB from "../../public/mongoDB.webp";
-import pygame from "../../public/pygame.webp";
+import vinted from "../assets/vinted.png";
+import marvel from "../assets/marvel.png";
+import giveMovies from "../assets/giveMovies.png";
+import snake from "../assets/snakeVsEvilSnake.png";
+import tailwind from "../assets/tailwind.webp";
+import typescript from "../assets/Typescript.webp";
+import python from "../assets/Python.webp";
+import react from "../assets/react.webp";
+import sass from "../assets/sass.webp";
+import nodeJs from "../assets/nodeJs.webp";
+import mongoDB from "../assets/mongoDB.webp";
+import pygame from "../assets/pygame.webp";
 
 type TGit = {
   link: string;

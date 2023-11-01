@@ -1,17 +1,17 @@
 import ImageTechno from "./ImageTechno";
 import Title from "./Title";
-import penpot from "../../public/penpot.webp";
-import html from "../../public/html.webp";
-import css from "../../public/css.webp";
-import typescript from "../../public/Typescript.webp";
-import python from "../../public/Python.webp";
-import react from "../../public/react.webp";
-import sass from "../../public/sass.webp";
-import nodeJs from "../../public/nodeJs.webp";
-import mongoDB from "../../public/mongoDB.webp";
-import github from "../../public/github.webp";
-import next from "../../public/next.png";
-import tailwind from "../../public/tailwind.webp";
+import penpot from "../assets/penpot.webp";
+import html from "../assets/html.webp";
+import css from "../assets/css.webp";
+import typescript from "../assets/Typescript.webp";
+import python from "../assets/Python.webp";
+import react from "../assets/react.webp";
+import sass from "../assets/sass.webp";
+import nodeJs from "../assets/nodeJs.webp";
+import mongoDB from "../assets/mongoDB.webp";
+import github from "../assets/github.webp";
+import next from "../assets/next.png";
+import tailwind from "../assets/tailwind.webp";
 
 export default function AboutMe() {
   return (
@@ -35,17 +35,15 @@ export default function AboutMe() {
             <strong className="hover:underline underline-offset-2 decoration-2">
               Vivre du Code
             </strong>{" "}
-            en Janvier 2023
           </a>{" "}
-          et je me suis formé à l'école du{" "}
+          en Janvier 2023 et je me suis formé à l'école du{" "}
           <a href="https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20reacteur&utm_content=377851505166&gad_source=1&gclid=Cj0KCQjw4vKpBhCZARIsAOKHoWTYa_na93HBD-c9K8ShKsObl08sLxYvEoh9e-yT-Qiic6t9RXcSxbQaAhLBEALw_wcB">
             <strong className="hover:underline underline-offset-2 decoration-2">
               Réacteur
             </strong>{" "}
-            d'Avril à Octobre 2023
           </a>
-          . Ce bootcamp m'a permis d'obtenir de solides compétences en tant que
-          développeur Full-Stack Web et Mobile.
+          d'Avril à Octobre 2023. Ce bootcamp m'a permis d'obtenir de solides
+          compétences en tant que développeur Full-Stack Web et Mobile.
         </p>
       </article>
       <article className="mt-16">
