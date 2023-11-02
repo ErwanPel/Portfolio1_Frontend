@@ -1,11 +1,13 @@
 import Title from "./Title";
 import logoReacteur from "../assets/leReacteur.webp";
+import SectionComponents from "./SectionComponents";
+import BlocText from "./BlocText";
 
 export default function Courses() {
   return (
-    <div className="flex flex-col items-center">
+    <SectionComponents>
       <Title title="< Courses />" />
-      <article className="mb-4 text-lg text-lgTextMax bg-lgBackgroundElement p-6 rounded-3xl">
+      <BlocText>
         <div className="flex gap-x-2 items-center mb-4">
           <img src={logoReacteur} className="w-6 h-6" />
           <h2 className="text-xl text-lgTextMax">
@@ -49,7 +51,7 @@ export default function Courses() {
             Mise en place de test unitaire avec Jest.js,
           </li>
         </ul>
-      </article>
-    </div>
+      </BlocText>
+    </SectionComponents>
   );
 }

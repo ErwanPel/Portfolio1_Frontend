@@ -5,6 +5,8 @@ import codeGarage from "../assets/code-garage.png";
 import cybersécuritéGrandMere from "../assets/cybersecuritéGrandMere.png";
 import codeWars from "../assets/codeWars.webp";
 import regexpCrossword from "../assets/regexpCrossword.webp";
+import BlocText from "./BlocText";
+import TitleLevel2 from "./TitleLevel2";
 
 const booksArray = [
   {
@@ -59,10 +61,11 @@ const ludicArray = [
 
 export default function Resources() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-y-8">
       <Title title="< Resources />" />
-      <article className="mb-12 text-lg text-lgTextMax bg-lgBackgroundElement p-6 rounded-3xl ">
-        <h2 className="font-bold text-xl text-center mb-4">Books</h2>
+
+      <BlocText>
+        <TitleLevel2 title="Books" />
         {booksArray.map((book) => {
           return (
             <div
@@ -85,9 +88,10 @@ export default function Resources() {
             </div>
           );
         })}
-      </article>
-      <article className="mb-12 text-lg text-lgTextMax bg-lgBackgroundElement p-6 rounded-3xl">
-        <h2 className="font-bold text-xl text-center mb-4">Podcasts</h2>
+      </BlocText>
+
+      <BlocText>
+        <TitleLevel2 title="Podcasts" />
         {podcastsArray.map((podcast) => {
           return (
             <div
@@ -110,9 +114,9 @@ export default function Resources() {
             </div>
           );
         })}
-      </article>
-      <article className="mb-12 text-lg text-lgTextMax bg-lgBackgroundElement p-6 rounded-3xl">
-        <h2 className="font-bold text-xl text-center mb-4">Ludic Games</h2>
+      </BlocText>
+      <BlocText>
+        <TitleLevel2 title="Ludic Games" />
         {ludicArray.map((ludic) => {
           return (
             <div
@@ -138,7 +142,7 @@ export default function Resources() {
             </div>
           );
         })}
-      </article>
+      </BlocText>
     </div>
   );
 }

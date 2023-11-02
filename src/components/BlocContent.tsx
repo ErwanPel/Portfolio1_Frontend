@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
-import { motion } from "framer-motion";
 import AboutMe from "./AbouteMe";
 import Projects from "./Projects";
 import Courses from "./Courses";
@@ -12,114 +11,16 @@ export default function BlocContent() {
   const { choice } = useSelector((store: RootState) => store.category);
 
   if (choice === null) {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        exit={{
-          y: [0, 2000],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-3/5"
-      >
-        <Home />
-      </motion.section>
-    );
+    return <Home />;
   } else if (choice === "about Me") {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-2/3 "
-      >
-        <AboutMe />
-      </motion.section>
-    );
+    return <AboutMe />;
   } else if (choice === "projects") {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-2/3"
-      >
-        <Projects />
-      </motion.section>
-    );
+    return <Projects />;
   } else if (choice === "courses") {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-2/3"
-      >
-        <Courses />
-      </motion.section>
-    );
+    return <Courses />;
   } else if (choice === "resources") {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-2/3 "
-      >
-        <Resources />
-      </motion.section>
-    );
+    return <Resources />;
   } else if (choice === "contacts") {
-    return (
-      <motion.section
-        key={choice}
-        animate={{
-          y: [1000, 0],
-          transition: {
-            type: "spring",
-            damping: 10,
-            stiffness: 55,
-          },
-        }}
-        className="w-2/3 bg-red-500"
-      >
-        <Contact />
-      </motion.section>
-    );
+    return <Contact />;
   }
 }

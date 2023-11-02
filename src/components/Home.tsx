@@ -2,10 +2,11 @@ import ButtonLink from "./ButtonLink";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Title from "./Title";
+import SectionComponents from "./SectionComponents";
 
 export default function Home() {
   return (
-    <div className="p-4">
+    <SectionComponents>
       <Title title="< Home />" />
       <div className="flex justify-between items-center">
         <div>
@@ -38,6 +39,6 @@ export default function Home() {
           name="erwanpellerinpro@gmail.com"
         />
       </nav>
-    </div>
+    </SectionComponents>
   );
 }

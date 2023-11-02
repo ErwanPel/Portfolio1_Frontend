@@ -12,13 +12,16 @@ import mongoDB from "../assets/mongoDB.webp";
 import github from "../assets/github.webp";
 import next from "../assets/next.png";
 import tailwind from "../assets/tailwind.webp";
+import BlocText from "./BlocText";
+import SectionComponents from "./SectionComponents";
+import TitleLevel2 from "./TitleLevel2";
 
 export default function AboutMe() {
   return (
-    <div>
+    <SectionComponents>
       <Title title="< About Me />" />
-      <article>
-        <p className="text-justify mb-4 text-lg text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
+      <BlocText>
+        <p>
           Hello ! Je m'appelle Erwan Pellerin et je suis{" "}
           <strong>développeur Full-Stack Web et Mobile junior</strong>. J'ai
           exercé le métier de psychomotricien durant 8 ans au sein de structures
@@ -26,7 +29,9 @@ export default function AboutMe() {
           l'adaptation, de la créativité, une gestion du stress ainsi qu'une
           bonne qualité d'écoute et d'observation.
         </p>
-        <p className="text-lg text-justify text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl">
+      </BlocText>
+      <BlocText>
+        <p>
           Je suis passionné par l'informatique et les nouvelles technologies
           depuis mon enfance. Après avoir commencé à coder en python en
           autodidacte, le goût pour la programmation m'a engagé sur la voie de
@@ -45,9 +50,10 @@ export default function AboutMe() {
           d'Avril à Octobre 2023. Ce bootcamp m'a permis d'obtenir de solides
           compétences en tant que développeur Full-Stack Web et Mobile.
         </p>
-      </article>
-      <article className="mt-16">
-        <h2 className="text-center text-3xl text-lgTextMax m-8">Skills</h2>
+      </BlocText>
+
+      <article className="mt-28">
+        <TitleLevel2 title="Skills" />
         <div className="flex justify-between">
           <div>
             <h3 className="mb-6 text-lgTextMin font-bold ">Design</h3>
@@ -154,6 +160,6 @@ export default function AboutMe() {
           </div>
         </div>
       </article>
-    </div>
+    </SectionComponents>
   );
 }
