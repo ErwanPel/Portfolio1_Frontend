@@ -7,7 +7,10 @@ function App() {
   return (
     <>
       <Header />
-      <main className=" w-screen bg-lgBackground ">
+      <main
+        className="w-screen dark:bg-blBackground
+           bg-lgBackground "
+      >
         <div className=" flex items-start justify-center px-8  min-h-screen mx-auto overflow-hidden py-12">
           <AnimatePresence>
             <BlocContent />
@@ -20,6 +23,3 @@ function App() {
 }
 
 export default App;
-
-// const select = selectMenu(choice);
-// return select;

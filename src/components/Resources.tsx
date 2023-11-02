@@ -80,8 +80,8 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-60 p-4">
-                <p className="font-bold text-">{book.title}</p>
+              <div className="w-40 p- mr-12">
+                <p className="font-bold">{book.title}</p>
                 <p>{book.author}</p>
               </div>
               <div className="w-80 p-2 text-justify">{book.description}</div>
@@ -106,8 +106,8 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-60 p-4">
-                <p className="font-bold text-">{podcast.title}</p>
+              <div className="w-40 p-4 mr-12">
+                <p className="font-bold">{podcast.title}</p>
                 <p>{podcast.author}</p>
               </div>
               <div className="w-80 p-2 text-justify">{podcast.description}</div>
@@ -131,7 +131,7 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-60 p-4 ">
+              <div className="w-40 p-4 mr-12">
                 <a href={ludic.url} target="blank">
                   <p className="font-bold hover:bg-lgHoverSolidBackground hover:text-lgSubBackground w-fit p-2 rounded-lg">
                     {ludic.title}

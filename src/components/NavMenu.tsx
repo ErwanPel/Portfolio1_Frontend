@@ -38,14 +38,14 @@ export default function NavMenu() {
       variants={navVariant}
       initial="hidden"
       animate="show"
-      className="flex overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 rounded-3xl border-lgBorder "
+      className="flex overflow-hidden items-center justify-center bg-lgBackgroundElement dark:bg-blBackgroundElement  border-2 rounded-3xl border-lgBorder dark:border-blBorder"
     >
       <motion.button
         variants={buttonVariant}
         className={
           choice === null
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32 py-6 hover:bg-lgHoverBackgroundElement `
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
         }
         onClick={() => dispatch(goToHome())}
       >
@@ -56,8 +56,8 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "about Me"
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
         }
         onClick={() => dispatch(goToAboutMe())}
       >
@@ -68,8 +68,8 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "projects"
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
         }
         onClick={() => dispatch(goToProjects())}
       >
@@ -81,8 +81,8 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "courses"
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
         }
         onClick={() => dispatch(goToCourse())}
       >
@@ -93,8 +93,8 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "resources"
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
         }
         onClick={() => dispatch(goToResources())}
       >
@@ -105,8 +105,8 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "contacts"
-            ? `text-lgTextMin  text-xl w-32 py-6 bg-lgSelectedBackgroundElement hover:bg-lgHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-32   py-6 hover:bg-lgHoverBackgroundElement`
+            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
         }
         onClick={() => dispatch(goToContacts())}
       >

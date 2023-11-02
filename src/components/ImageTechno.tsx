@@ -18,7 +18,9 @@ export default function ImageTechno({
       >
         <img width={30} src={source} alt={alt} className="object-cover " />
       </div>
-      <p className="text-sm w-[50px] text-center mt-1">{name}</p>
+      <p className="text-sm text-blTextMin dark:text-blTextMin w-[50px] text-center mt-1">
+        {name}
+      </p>
     </div>
   );
 }

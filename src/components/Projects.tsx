@@ -65,16 +65,17 @@ export default function Projects() {
         </p>
       </BlocText>
       <SideNaveProjects
+        projects={projects}
         changeProject={changeProject}
         nameProjects={nameProjects}
         setNameProjects={setNameProjects}
       />
       <section className="flex flex-col mt-8 ">
-        <nav className="flex justify-around items-center border-t border-lgElementSeparator mt-12 pt-10">
+        <nav className="flex justify-around items-center border-t border-lgElementSeparator dark:border-blElementSeparator mt-12 pt-10">
           <button onClick={() => changePage("left")}>
             <FontAwesomeIcon
               icon={faAngleLeft}
-              className="text-lgTextMin text-[24px] p-2 hover:bg-lgHoverBackgroundElement rounded-full"
+              className="text-lgTextMin dark:text-blTextMin text-[24px] p-2  dark:hover:bg-blHoverBackgroundElement rounded-full"
             />
           </button>
           <TitleLevel2 title={projects.name} />
@@ -83,7 +84,7 @@ export default function Projects() {
             <FontAwesomeIcon
               onClick={() => changePage("right")}
               icon={faAngleRight}
-              className="text-lgTextMin text-[24px] p-2 hover:bg-lgHoverBackgroundElement rounded-full"
+              className="text-lgTextMin dark:text-blTextMin text-[24px] p-2 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement rounded-full"
             />
           </button>
         </nav>
@@ -94,7 +95,7 @@ export default function Projects() {
             alt={`photo du projet ${projects.name}`}
           />
         </figure>
-        <article className="border-2 border-lgTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10">
+        <article className="border-2 border-lgTextMax dark:border-blTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10">
           {projects.stacks.map((stack) => {
             return (
               <ImageTechno

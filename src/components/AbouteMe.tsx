@@ -56,8 +56,10 @@ export default function AboutMe() {
         <TitleLevel2 title="Skills" />
         <div className="flex justify-between">
           <div>
-            <h3 className="mb-6 text-lgTextMin font-bold ">Design</h3>
-            <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
+            <h3 className="mb-6 text-lgTextMin dark:text-blTextMin font-bold ">
+              Design
+            </h3>
+            <div className="flex flex-col gap-y-4 border-t border-lgTextMin dark:border-blTextMin pt-6">
               <ImageTechno
                 source={penpot}
                 alt="logo de Penpot"
@@ -67,8 +69,10 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin font-bold">Langages</h3>
-            <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
+            <h3 className="mb-6 text-lgTextMin dark:text-blTextMin font-bold">
+              Langages
+            </h3>
+            <div className="flex flex-col gap-y-4 border-t border-lgTextMin dark:border-blTextMin pt-6">
               <ImageTechno
                 source={html}
                 alt="logo de HTML"
@@ -96,8 +100,10 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin font-bold">Front-End</h3>
-            <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
+            <h3 className="mb-6 text-lgTextMin dark:text-blTextMin font-bold">
+              Front-End
+            </h3>
+            <div className="flex flex-col gap-y-4 border-t border-lgTextMin dark:border-blTextMin pt-6">
               <ImageTechno
                 source={react}
                 alt="logo de React"
@@ -131,8 +137,10 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin font-bold">Back-End</h3>
-            <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
+            <h3 className="mb-6 text-lgTextMin dark:text-blTextMin font-bold">
+              Back-End
+            </h3>
+            <div className="flex flex-col gap-y-4 border-t border-lgTextMin dark:border-blTextMin pt-6">
               <ImageTechno
                 source={nodeJs}
                 alt="Logo de Node.js"
@@ -148,8 +156,10 @@ export default function AboutMe() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 text-lgTextMin font-bold">Tools</h3>
-            <div className="flex flex-col gap-y-4 border-t border-lgTextMin pt-6">
+            <h3 className="mb-6 text-lgTextMin dark:text-blTextMin font-bold">
+              Tools
+            </h3>
+            <div className="flex flex-col gap-y-4 border-t border-lgTextMin dark:border-blTextMin pt-6">
               <ImageTechno
                 source={github}
                 alt="logo de Github"

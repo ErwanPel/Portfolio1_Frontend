@@ -43,6 +43,4 @@ export const {
   goToResources,
 } = categorySlice.actions;
 
-console.log("ici", categorySlice.reducer);
-
 export default categorySlice.reducer;

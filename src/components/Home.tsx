@@ -10,19 +10,25 @@ export default function Home() {
       <Title title="< Home />" />
       <div className="flex justify-between items-center">
         <div>
-          <p className="text-3xl mb-4 text-lgTextMin">Hello, I'm</p>
-          <p className="text-[48px] font-bold mb-4 text-lgTextMax">
+          <p className="text-3xl mb-4 text-lgTextMin dark:text-blTextMin">
+            Hello, I'm
+          </p>
+          <p className="text-[48px] font-bold mb-4 text-lgTextMax dark:text-blTextMax">
             Erwan Pellerin
           </p>
-          <p className="text-3xl text-lgTextMin">
+          <p className="text-3xl text-lgTextMin dark:text-blTextMin">
             Full-Stack junior developper
           </p>
         </div>
-        <figure className="border  border-lgBackground bg-black h-40 w-40 rounded-full">
+
+        <figure className="border border-lgBackground dark:border-blBackground bg-black h-40 w-40 rounded-full">
           <img src="" alt="" />
         </figure>
       </div>
-      <nav className="flex gap-x-3 flex-wrap mt-24">
+      <p className="mt-24 text-5xl text-lgTextMin dark:text-blTextMin">
+        Welcome on my portfolio
+      </p>
+      <nav className="flex gap-x-3 flex-wrap mt-12">
         <ButtonLink
           icon={faGithub}
           link="https://github.com/ErwanPel"
