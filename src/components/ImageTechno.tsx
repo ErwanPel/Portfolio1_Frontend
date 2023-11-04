@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../features/store";
+
 type ImageTechnoProps = {
   source: string;
   alt: string;
@@ -11,6 +14,7 @@ export default function ImageTechno({
   color,
   name,
 }: ImageTechnoProps) {
+  const { theme } = useSelector((store: RootState) => store.theme);
   return (
     <div className="flex flex-col items-center">
       <div
@@ -18,7 +22,13 @@ export default function ImageTechno({
       >
         <img width={30} src={source} alt={alt} className="object-cover " />
       </div>
-      <p className="text-sm text-blTextMin dark:text-blTextMin w-[50px] text-center mt-1">
+      <p
+        className={
+          theme === "dark"
+            ? "text-sm  text-blTextMin w-[50px] text-center mt-1"
+            : "text-sm text-lgTextMin  w-[50px] text-center mt-1"
+        }
+      >
         {name}
       </p>
     </div>

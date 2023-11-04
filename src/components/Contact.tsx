@@ -83,7 +83,7 @@ export default function Contact() {
         </GroupForm>
 
         <GroupForm>
-          <label className=" text-lg" htmlFor="email">
+          <label className="text-lg" htmlFor="email">
             Please enter your email :
           </label>
           <input

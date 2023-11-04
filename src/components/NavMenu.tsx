@@ -15,6 +15,7 @@ import { RootState } from "../features/store";
 
 export default function NavMenu() {
   const { choice } = useSelector((store: RootState) => store.category);
+  const { theme } = useSelector((store: RootState) => store.theme);
   const dispatch: AppDispatch = useDispatch();
 
   const navVariant = {
@@ -38,14 +39,22 @@ export default function NavMenu() {
       variants={navVariant}
       initial="hidden"
       animate="show"
-      className="flex overflow-hidden items-center justify-center bg-lgBackgroundElement dark:bg-blBackgroundElement  border-2 rounded-3xl border-lgBorder dark:border-blBorder"
+      className={
+        theme === "dark"
+          ? "flex overflow-hidden items-center justify-center  bg-blBackgroundElement  border-2 rounded-3xl  border-blBorder "
+          : "flex overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 rounded-3xl border-lgBorder "
+      }
     >
       <motion.button
         variants={buttonVariant}
         className={
           choice === null
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5  py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToHome())}
       >
@@ -56,8 +65,12 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "about Me"
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToAboutMe())}
       >
@@ -68,8 +81,12 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "projects"
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToProjects())}
       >
@@ -81,8 +98,12 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "courses"
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToCourse())}
       >
@@ -93,8 +114,12 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "resources"
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToResources())}
       >
@@ -105,8 +130,12 @@ export default function NavMenu() {
         variants={buttonVariant}
         className={
           choice === "contacts"
-            ? `text-lgTextMin dark:text-blTextMin text-xl w-32 py-3 bg-lgSelectedBackgroundElement dark:bg-blSelectedBackgroundElement hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin dark:text-blTextMin text-xl w-32   py-3 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement`
+            ? theme === "dark"
+              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+            : theme === "dark"
+            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToContacts())}
       >

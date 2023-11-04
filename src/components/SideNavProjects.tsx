@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { TProjects, arrayProjects } from "../data/projectsArray";
+import { useSelector } from "react-redux";
+import { RootState } from "../features/store";
 
 type SideNavProps = {
   changeProject: (id: number) => void;
@@ -14,7 +16,7 @@ export default function SideNaveProjects({
   setNameProjects,
   projects,
 }: SideNavProps) {
-  console.log("ici", nameProjects);
+  const { theme } = useSelector((store: RootState) => store.theme);
 
   return (
     <motion.nav
@@ -32,7 +34,11 @@ export default function SideNaveProjects({
         top: -200,
         bottom: 100,
       }}
-      className="flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6 border-lgElementSeparator dark:border-blElementSeparator rounded-3xl rounded-bl-3xl bg-lgBackgroundElement dark:bg-blBackgroundElement left-8 top-[200px] "
+      className={
+        theme === "dark"
+          ? "flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6  border-blElementSeparator rounded-3xl rounded-bl-3xl  bg-blBackgroundElement left-8 top-[200px] "
+          : "flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6 border-lgElementSeparator rounded-3xl rounded-bl-3xl bg-lgBackgroundElement  left-8 top-[200px] "
+      }
     >
       {arrayProjects.map((img) => {
         return (
@@ -43,8 +49,12 @@ export default function SideNaveProjects({
             onMouseLeave={() => setNameProjects(null)}
             className={
               projects.name === img.name
-                ? "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator dark:border-blElementSeparator opacity-30"
-                : "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator dark:border-blElementSeparator"
+                ? theme === "dark"
+                  ? "rounded-xl hover:cursor-pointer h-28 w-28 border  border-blElementSeparator opacity-30"
+                  : "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator opacity-30"
+                : theme === "dark"
+                ? "rounded-xl hover:cursor-pointer h-28 w-28 border  border-blElementSeparator"
+                : "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator "
             }
           >
             {nameProjects === img.name ? (

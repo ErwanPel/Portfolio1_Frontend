@@ -14,11 +14,15 @@ import SectionComponents from "./SectionComponents";
 import BlocText from "./BlocText";
 import SideNaveProjects from "./SideNavProjects";
 import TitleLevel2 from "./TitleLevel2";
+import { useSelector } from "react-redux";
+import { RootState } from "../features/store";
 
 export default function Projects() {
   const [nameProjects, setNameProjects] = useState<string | null>(null);
   const [id, setID] = useState<number>(0);
   const [projects, setProjects] = useState(arrayProjects[id]);
+
+  const { theme } = useSelector((store: RootState) => store.theme);
 
   const changePage = (direction: string) => {
     console.log(direction);
@@ -71,11 +75,21 @@ export default function Projects() {
         setNameProjects={setNameProjects}
       />
       <section className="flex flex-col mt-8 ">
-        <nav className="flex justify-around items-center border-t border-lgElementSeparator dark:border-blElementSeparator mt-12 pt-10">
+        <nav
+          className={
+            theme === "dark"
+              ? "flex justify-around items-center border-t  border-blElementSeparator mt-12 pt-10"
+              : "flex justify-around items-center border-t border-lgElementSeparator  mt-12 pt-10"
+          }
+        >
           <button onClick={() => changePage("left")}>
             <FontAwesomeIcon
               icon={faAngleLeft}
-              className="text-lgTextMin dark:text-blTextMin text-[24px] p-2  dark:hover:bg-blHoverBackgroundElement rounded-full"
+              className={
+                theme === "dark"
+                  ? " text-blTextMin text-[24px] p-2  hover:bg-blHoverBackgroundElement rounded-full"
+                  : "text-lgTextMin  text-[24px] p-2  hover:bg-lgHoverBackgroundElement rounded-full"
+              }
             />
           </button>
           <TitleLevel2 title={projects.name} />
@@ -84,7 +98,11 @@ export default function Projects() {
             <FontAwesomeIcon
               onClick={() => changePage("right")}
               icon={faAngleRight}
-              className="text-lgTextMin dark:text-blTextMin text-[24px] p-2 hover:bg-lgHoverBackgroundElement dark:hover:bg-blHoverBackgroundElement rounded-full"
+              className={
+                theme === "dark"
+                  ? " text-blTextMin text-[24px] p-2  hover:bg-blHoverBackgroundElement rounded-full"
+                  : "text-lgTextMin  text-[24px] p-2  hover:bg-lgHoverBackgroundElement rounded-full"
+              }
             />
           </button>
         </nav>
@@ -95,7 +113,13 @@ export default function Projects() {
             alt={`photo du projet ${projects.name}`}
           />
         </figure>
-        <article className="border-2 border-lgTextMax dark:border-blTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10">
+        <article
+          className={
+            theme === "dark"
+              ? "border-2  border-blTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10"
+              : "border-2 border-lgTextMax  rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10"
+          }
+        >
           {projects.stacks.map((stack) => {
             return (
               <ImageTechno

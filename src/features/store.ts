@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import categoryReducer from "./category/category";
-import "./category/category";
+import themeReducer from "./theme/theme";
 
 export const store = configureStore({
   reducer: {
     category: categoryReducer,
+    theme: themeReducer,
   },
 });
 
