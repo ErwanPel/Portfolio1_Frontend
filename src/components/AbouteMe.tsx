@@ -57,13 +57,13 @@ export default function AboutMe() {
 
       <article className="mt-28">
         <TitleLevel2 title="Skills" />
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col gap-y-6 sm:gap-y-0 sm:flex-row">
           <div>
             <h3
               className={
                 theme === "dark"
-                  ? "mb-6  text-blTextMin font-bold "
-                  : "mb-6 text-lgTextMin font-bold "
+                  ? "mb-6  text-blTextMin font-bold text-center "
+                  : "mb-6 text-lgTextMin font-bold text-center "
               }
             >
               Design
@@ -71,8 +71,8 @@ export default function AboutMe() {
             <div
               className={
                 theme === "dark"
-                  ? "flex flex-col gap-y-4 border-t border-blTextMin pt-6"
-                  : "flex flex-col gap-y-4 border-t border-lgTextMin pt-6"
+                  ? "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-blTextMin pt-6"
+                  : "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-lgTextMin pt-6"
               }
             >
               <ImageTechno
@@ -87,8 +87,8 @@ export default function AboutMe() {
             <h3
               className={
                 theme === "dark"
-                  ? "mb-6  text-blTextMin font-bold "
-                  : "mb-6 text-lgTextMin font-bold "
+                  ? "mb-6  text-blTextMin font-bold text-center "
+                  : "mb-6 text-lgTextMin font-bold text-center "
               }
             >
               Langages
@@ -96,8 +96,8 @@ export default function AboutMe() {
             <div
               className={
                 theme === "dark"
-                  ? "flex flex-col gap-y-4 border-t border-blTextMin pt-6"
-                  : "flex flex-col gap-y-4 border-t border-lgTextMin pt-6"
+                  ? "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-blTextMin pt-6"
+                  : "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-lgTextMin pt-6"
               }
             >
               <ImageTechno
@@ -130,8 +130,8 @@ export default function AboutMe() {
             <h3
               className={
                 theme === "dark"
-                  ? "mb-6  text-blTextMin font-bold "
-                  : "mb-6 text-lgTextMin font-bold "
+                  ? "mb-6  text-blTextMin font-bold text-center "
+                  : "mb-6 text-lgTextMin font-bold text-center "
               }
             >
               Front-End
@@ -139,8 +139,8 @@ export default function AboutMe() {
             <div
               className={
                 theme === "dark"
-                  ? "flex flex-col gap-y-4 border-t border-blTextMin pt-6"
-                  : "flex flex-col gap-y-4 border-t border-lgTextMin pt-6"
+                  ? "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-blTextMin pt-6"
+                  : "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-lgTextMin pt-6"
               }
             >
               <ImageTechno
@@ -179,8 +179,8 @@ export default function AboutMe() {
             <h3
               className={
                 theme === "dark"
-                  ? "mb-6  text-blTextMin font-bold "
-                  : "mb-6 text-lgTextMin font-bold "
+                  ? "mb-6  text-blTextMin font-bold text-center "
+                  : "mb-6 text-lgTextMin font-bold text-center "
               }
             >
               Back-End
@@ -188,8 +188,8 @@ export default function AboutMe() {
             <div
               className={
                 theme === "dark"
-                  ? "flex flex-col gap-y-4 border-t border-blTextMin pt-6"
-                  : "flex flex-col gap-y-4 border-t border-lgTextMin pt-6"
+                  ? "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-blTextMin pt-6"
+                  : "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-lgTextMin pt-6"
               }
             >
               <ImageTechno
@@ -210,8 +210,8 @@ export default function AboutMe() {
             <h3
               className={
                 theme === "dark"
-                  ? "mb-6  text-blTextMin font-bold "
-                  : "mb-6 text-lgTextMin font-bold "
+                  ? "mb-6  text-blTextMin font-bold text-center "
+                  : "mb-6 text-lgTextMin font-bold text-center "
               }
             >
               Tools
@@ -219,8 +219,8 @@ export default function AboutMe() {
             <div
               className={
                 theme === "dark"
-                  ? "flex flex-col gap-y-4 border-t border-blTextMin pt-6"
-                  : "flex flex-col gap-y-4 border-t border-lgTextMin pt-6"
+                  ? "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-blTextMin pt-6"
+                  : "flex flex-row gap-x-3 justify-center mb-10 sm:mb-0 sm:gap-x-0 sm:flex-col gap-y-4 border-t border-lgTextMin pt-6"
               }
             >
               <ImageTechno

@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <SectionComponents>
       <Title title="< Home />" />
-      <div className="flex justify-between items-center">
-        <div>
+      <div className="flex flex-col gap-y-16 lg:flex-row sm:justify-between items-center">
+        <div className="flex flex-col items-center sm:items-start">
           <p
             className={
               theme === "dark"
@@ -25,8 +25,8 @@ export default function Home() {
           <p
             className={
               theme === "dark"
-                ? "text-[48px] font-bold mb-4  text-blTextMax"
-                : "text-[48px] font-bold mb-4 text-lgTextMax"
+                ? "text-2xl sm:text-[48px] font-bold mb-4  text-blTextMax"
+                : "text-2xl sm:text-[48px] font-bold mb-4 text-lgTextMax"
             }
           >
             Erwan Pellerin
@@ -34,8 +34,8 @@ export default function Home() {
           <p
             className={
               theme === "dark"
-                ? "text-3xl text-blTextMin"
-                : "text-3xl  text-lgTextMin "
+                ? "text-xl sm:text-3xl text-blTextMin"
+                : "text-xl sm:text-3xl  text-lgTextMin "
             }
           >
             Full-Stack junior developper
@@ -55,13 +55,13 @@ export default function Home() {
       <p
         className={
           theme === "dark"
-            ? "mt-24 text-5xl  text-blTextMin"
-            : "mt-24 text-5xl text-lgTextMin "
+            ? "mt-24 text-3xl text-center sm:text-start sm:text-5xl  text-blTextMin"
+            : "mt-24 text-3xl text-center sm:text-start sm:text-5xl text-lgTextMin "
         }
       >
         Welcome on my portfolio
       </p>
-      <nav className="flex gap-x-3 flex-wrap mt-12">
+      <nav className="flex gap-x-3 flex-wrap mt-12 gap-y-4 justify-center sm:justify-start">
         <ButtonLink
           icon={faGithub}
           link="https://github.com/ErwanPel"

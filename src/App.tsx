@@ -17,7 +17,7 @@ function App() {
             : "w-screen  bg-lgBackground"
         }
       >
-        <div className=" flex items-start justify-center px-8  min-h-screen mx-auto overflow-hidden py-12">
+        <div className=" flex items-start justify-center sm:px-8  min-h-screen mx-auto overflow-hidden py-12">
           <AnimatePresence>
             <BlocContent />
           </AnimatePresence>

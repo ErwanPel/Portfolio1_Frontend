@@ -106,7 +106,7 @@ export default function Projects() {
             />
           </button>
         </nav>
-        <figure className="mt-10 self-center w-fit h-[500px] rounded-lg shadow-2xl">
+        <figure className="mt-10 self-center w-fit sm:h-[500px]  rounded-lg">
           <img
             className="object-contain w-full h-full rounded-lg"
             src={projects.picture}
@@ -116,8 +116,8 @@ export default function Projects() {
         <article
           className={
             theme === "dark"
-              ? "border-2  border-blTextMax rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10"
-              : "border-2 border-lgTextMax  rounded-full py-4 px-6 flex items-center mx-auto justify-around w-fit gap-x-12 my-10"
+              ? "border-2  border-blTextMax rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
+              : "border-2 border-lgTextMax rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
           }
         >
           {projects.stacks.map((stack) => {
@@ -136,7 +136,7 @@ export default function Projects() {
           <p>{projects.description}</p>
         </BlocText>
 
-        <nav className="flex mt-6 justify-center gap-x-4">
+        <nav className="flex mt-6 justify-center gap-x-4 gap-y-4 flex-wrap">
           {projects.github.map((git) => {
             return (
               <ButtonLink
@@ -151,7 +151,7 @@ export default function Projects() {
             <ButtonLink
               icon={faArrowUpRightFromSquare}
               link={projects.urlLink}
-              name={projects.urlLink}
+              name={`site de ${projects.name}`}
             />
           )}
         </nav>

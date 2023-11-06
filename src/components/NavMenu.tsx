@@ -41,8 +41,8 @@ export default function NavMenu() {
       animate="show"
       className={
         theme === "dark"
-          ? "flex overflow-hidden items-center justify-center  bg-blBackgroundElement  border-2 rounded-3xl  border-blBorder "
-          : "flex overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 rounded-3xl border-lgBorder "
+          ? "hidden sm:flex overflow-hidden items-center justify-center  bg-blBackgroundElement  border-2 rounded-3xl  border-blBorder "
+          : "hidden sm:flex overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 rounded-3xl border-lgBorder "
       }
     >
       <motion.button

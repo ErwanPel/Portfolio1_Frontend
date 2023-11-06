@@ -70,9 +70,9 @@ export default function Resources() {
           return (
             <div
               key={book.title}
-              className=" flex items-center justify-between mb-6 p-6 rounded-xl"
+              className="flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 sm:p-6 rounded-xl"
             >
-              <figure className="w-24 mr-6">
+              <figure className="w-24 sm:mr-6">
                 <img
                   src={book.img}
                   alt={`livre ${book.title}`}
@@ -80,7 +80,7 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-40 p- mr-12">
+              <div className="sm:w-40 text-center sm:text-start sm:mr-12 ">
                 <p className="font-bold">{book.title}</p>
                 <p>{book.author}</p>
               </div>
@@ -96,9 +96,9 @@ export default function Resources() {
           return (
             <div
               key={podcast.title}
-              className=" flex items-center justify-between mb-6 p-6 rounded-xl"
+              className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
             >
-              <figure className="w-24 mr-6">
+              <figure className="w-24 sm:mr-6">
                 <img
                   src={podcast.img}
                   alt={`livre ${podcast.title}`}
@@ -106,7 +106,7 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-40 p-4 mr-12">
+              <div className="sm:w-40 p-4 sm:mr-12 text-center sm:text-start">
                 <p className="font-bold">{podcast.title}</p>
                 <p>{podcast.author}</p>
               </div>
@@ -121,9 +121,9 @@ export default function Resources() {
           return (
             <div
               key={ludic.title}
-              className=" flex items-center justify-between mb-6 p-6 rounded-xl"
+              className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
             >
-              <figure className="w-24 mr-6">
+              <figure className="w-24 sm:mr-6">
                 <img
                   src={ludic.img}
                   alt={`livre ${ludic.title}`}
@@ -131,7 +131,7 @@ export default function Resources() {
                 />
               </figure>
 
-              <div className="w-40 p-4 mr-12">
+              <div className="sm:w-40 p-4 sm:mr-12">
                 <a href={ludic.url} target="blank">
                   <p className="font-bold hover:bg-lgHoverSolidBackground hover:text-lgSubBackground w-fit p-2 rounded-lg">
                     {ludic.title}

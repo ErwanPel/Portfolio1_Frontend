@@ -36,8 +36,8 @@ export default function SideNaveProjects({
       }}
       className={
         theme === "dark"
-          ? "flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6  border-blElementSeparator rounded-3xl rounded-bl-3xl  bg-blBackgroundElement left-8 top-[200px] "
-          : "flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-36 mx-auto border fixed py-6 border-lgElementSeparator rounded-3xl rounded-bl-3xl bg-lgBackgroundElement  left-8 top-[200px] "
+          ? "hidden sm:flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-24 sm:w-36 mx-auto border fixed py-6  border-blElementSeparator rounded-3xl rounded-bl-3xl  bg-blBackgroundElement left-3 top-[500px] sm:left-8 sm:top-[200px] "
+          : "hidden sm:flex flex-wrap justify-center items-center cursor-grab active:cursor-grabbing gap-y-4 w-24 sm:w-36 mx-auto border fixed py-6 border-lgElementSeparator rounded-3xl rounded-bl-3xl bg-lgBackgroundElement left-3 top-[500px] sm:left-8 sm:top-[200px] "
       }
     >
       {arrayProjects.map((img) => {
@@ -50,20 +50,20 @@ export default function SideNaveProjects({
             className={
               projects.name === img.name
                 ? theme === "dark"
-                  ? "rounded-xl hover:cursor-pointer h-28 w-28 border  border-blElementSeparator opacity-30"
-                  : "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator opacity-30"
+                  ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator opacity-30"
+                  : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator opacity-30"
                 : theme === "dark"
-                ? "rounded-xl hover:cursor-pointer h-28 w-28 border  border-blElementSeparator"
-                : "rounded-xl hover:cursor-pointer h-28 w-28 border border-lgElementSeparator "
+                ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator"
+                : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator "
             }
           >
             {nameProjects === img.name ? (
-              <div className="bg-black rounded-xl opacity-80 w-full h-full flex justify-center items-center">
-                <p className="text-white ">{img.name}</p>
+              <div className="bg-black rounded-lg sm:rounded-xl opacity-80 w-full h-full flex justify-center items-center">
+                <p className="text-white text-sm sm:text-base">{img.name}</p>
               </div>
             ) : (
               <img
-                className="object-cover w-full h-full rounded-xl"
+                className="object-cover w-full h-full rounded-lg sm:rounded-xl"
                 src={img.picture}
               />
             )}
