@@ -155,7 +155,7 @@ export default function Projects() {
             />
           )}
         </nav>
-        <p>video</p>
+        <img className="mt-24  mx-auto" src={projects.video} alt="" />
       </section>
     </SectionComponents>
   );

@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <SectionComponents>
       <Title title="< Home />" />
-      <div className="flex flex-col gap-y-16 lg:flex-row sm:justify-between items-center">
-        <div className="flex flex-col items-center sm:items-start">
+      <div className="flex flex-col gap-y-16 lg:flex-row sm:justify-between items-center gap-x-12">
+        <div className="flex flex-col items-center sm:items-start ">
           <p
             className={
               theme === "dark"

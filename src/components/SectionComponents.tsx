@@ -24,7 +24,6 @@ export default function SectionComponents({
           stiffness: 55,
         },
       }}
-      className="w-3/5 "
     >
       {children}
     </motion.section>

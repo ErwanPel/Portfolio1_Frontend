@@ -10,6 +10,9 @@ import sass from "../assets/sass.webp";
 import nodeJs from "../assets/nodeJs.webp";
 import mongoDB from "../assets/mongoDB.webp";
 import pygame from "../assets/pygame.webp";
+import airbnb from "../assets/airbnb.gif";
+import snakeVs from "../assets/snakeVs.gif";
+import marvelVideo from "../assets/marvel.gif";
 
 type TGit = {
   link: string;
@@ -31,12 +34,13 @@ export type TProjects = {
   github: TGit[];
   description: string;
   stacks: TStacks[];
+  video: string;
 };
 
 export const arrayProjects: TProjects[] = [
   {
     name: "Vinted",
-
+    video: airbnb,
     id: 0,
     picture: vinted,
     urlLink: "https://vinted-front-exercice.netlify.app",
@@ -72,7 +76,7 @@ export const arrayProjects: TProjects[] = [
   },
   {
     name: "Marvel",
-
+    video: marvelVideo,
     id: 1,
     picture: marvel,
     urlLink: "https://marvel-scss.netlify.app",
@@ -114,7 +118,8 @@ export const arrayProjects: TProjects[] = [
   },
   {
     name: "GiveMovies",
-
+    video:
+      "https://res.cloudinary.com/dtiqq9jgx/video/upload/v1699353693/Marvel_ekgh10.mp4",
     id: 2,
     picture: giveMovies,
     urlLink: "",
@@ -165,7 +170,7 @@ export const arrayProjects: TProjects[] = [
   },
   {
     name: "SnakeVs",
-
+    video: snakeVs,
     id: 3,
     picture: snake,
     urlLink: "",
