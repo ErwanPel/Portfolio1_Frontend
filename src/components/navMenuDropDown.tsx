@@ -22,9 +22,10 @@ export default function NavMenuDropDown() {
   const dispatch: AppDispatch = useDispatch();
 
   const navVariant = {
-    hidden: { y: -1000 },
+    hidden: { y: -1000, opacity: 0 },
     show: {
       y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5,
         staggerChildren: 0.1,
@@ -44,13 +45,13 @@ export default function NavMenuDropDown() {
       animate="show"
       className={
         theme === "dark"
-          ? "relative z-4 p-4 flex flex-col overflow-hidden items-center justify-center  bg-blBackgroundElement  border-2  border-blBorder "
-          : "relative z-4 p-4 flex flex-col overflow-hidden items-center justify-center bg-lgBackgroundElement  border-2 border-lgBorder "
+          ? "relative z-20 p-4 flex flex-col overflow-hidden items-center justify-center  bg-blBackgroundElement border-b-2 border-blBorder h-fit w-full top-[-25px]"
+          : "relative z-20 p-4 flex flex-col overflow-hidden items-center justify-center bg-lgBackgroundElement border-b-2 border-lgBorder h-fit w-full top-[-25px] "
       }
     >
       <FontAwesomeIcon
         icon={faCircleXmark}
-        className="self-end mr-6 cursor-pointer "
+        className="self-end mr-6 cursor-pointer text-2xl hover:opacity-70"
         onClick={() => dispatch(setCloseMenu())}
         color="#12A594"
       />

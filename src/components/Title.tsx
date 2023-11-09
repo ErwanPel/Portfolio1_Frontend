@@ -6,13 +6,10 @@ type titleProps = {
 };
 
 export default function Title({ title }: titleProps) {
-  const { openMenu } = useSelector((store: RootState) => store.menu);
   const { theme } = useSelector((store: RootState) => store.theme);
   return (
     <>
-      <div
-        className={openMenu ? "w-fit mx-auto hidden" : "w-fit mx-auto relative"}
-      >
+      <div className="w-fit mx-auto relative">
         <h1
           className={
             theme === "dark"

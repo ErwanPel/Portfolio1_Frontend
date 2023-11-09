@@ -17,21 +17,33 @@ import SectionComponents from "./SectionComponents";
 import TitleLevel2 from "./TitleLevel2";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
+import global_fr from "../translations/en/global.json";
+import global_en from "../translations/fr/global.json";
 
 export default function AboutMe() {
   const { theme } = useSelector((store: RootState) => store.theme);
+  const { language } = useSelector((store: RootState) => store.language);
   return (
     <SectionComponents>
-      <Title title="< About Me />" />
+      <Title
+        title={
+          language === "en" ? global_en.AboutMe.title : global_fr.AboutMe.title
+        }
+      />
       <BlocText>
-        <p>
-          Hello ! Je m'appelle Erwan Pellerin et je suis{" "}
-          <strong>développeur Full-Stack Web et Mobile junior</strong>. J'ai
-          exercé le métier de psychomotricien durant 8 ans au sein de structures
-          médico-sociaux, un métier nécessitant de la curiosité, de
-          l'adaptation, de la créativité, une gestion du stress ainsi qu'une
-          bonne qualité d'écoute et d'observation.
-        </p>
+        <span>
+          {language === "en"
+            ? global_en.AboutMe.first
+            : global_fr.AboutMe.first}
+        </span>
+        <strong>
+          {language === "en" ? global_en.AboutMe.job : global_fr.AboutMe.job}
+        </strong>
+        <span>
+          {language === "en"
+            ? global_en.AboutMe.firstbis
+            : global_fr.AboutMe.firstbis}
+        </span>
       </BlocText>
       <BlocText>
         <p>

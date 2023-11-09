@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   faAngleRight,
   faAngleLeft,
@@ -21,6 +22,9 @@ export default function Projects() {
   const [nameProjects, setNameProjects] = useState<string | null>(null);
   const [id, setID] = useState<number>(0);
   const [projects, setProjects] = useState(arrayProjects[id]);
+  const [littleScreen] = useState<boolean>(
+    window.innerWidth < 1280 ? true : false
+  );
 
   const { theme } = useSelector((store: RootState) => store.theme);
 
@@ -73,6 +77,7 @@ export default function Projects() {
         changeProject={changeProject}
         nameProjects={nameProjects}
         setNameProjects={setNameProjects}
+        littleScreen={littleScreen}
       />
       <section className="flex flex-col mt-8 ">
         <nav
@@ -155,7 +160,15 @@ export default function Projects() {
             />
           )}
         </nav>
-        <img className="mt-24  mx-auto" src={projects.video} alt="" />
+        <img
+          className={
+            theme === "dark"
+              ? "mt-24 rounded-xl mx-auto "
+              : "mt-24 rounded-xl mx-auto border-2 border-black"
+          }
+          src={projects.video}
+          alt=""
+        />
       </section>
     </SectionComponents>
   );

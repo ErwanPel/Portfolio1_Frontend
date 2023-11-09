@@ -1,0 +1,16 @@
+{
+  "Home": {
+    "title": "< Home />",
+    "first": "Hello, I'm",
+    "second": "Full-Stack junior developper",
+    "third": "Welcome on my portfolio"
+  },
+  "AboutMe": {
+    "title": "< About Me />",
+    "first": "Hello, my name is Erwan Pellerin and I'm a ",
+    "job": "junior Full-Stack Web and Mobile developer",
+    "firstbis": ".  I worked as a psychomotor therapist for 8 years in medical-social structures, a job that requires curiosity, adaptation, creativity, stress management and good listening and observation skills.",
+    "second": "I've had a passion for computers and new technologies ever since I was a child. After having started coding in Python as a self-taught person, my taste for programming led me to the path of professional reconversion. I joined the <a href='https://coder-pour-changer-de-vie.com/formations/'><strong className='hover:underline underline-offset-2 decoration-2'>Vivre du Code </strong></a> club n January 2023 and trained at <a href='https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20reacteur&utm_content=377851505166&gad_source=1&gclid=Cj0KCQjw4vKpBhCZARIsAOKHoWTYa_na93HBD-c9K8ShKsObl08sLxYvEoh9e-yT-Qiic6t9RXcSxbQaAhLBEALw_wcB'><strong className='hover:underline underline-offset-2 decoration-2'>Réacteur</strong></a> school from April to October 2023. This bootcamp enabled me to acquire solid skills as a Full-Stack Web and Mobile developer.",
+    "section": "Skills"
+  }
+}

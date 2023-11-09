@@ -7,6 +7,7 @@ import codeWars from "../assets/codeWars.webp";
 import regexpCrossword from "../assets/regexpCrossword.webp";
 import BlocText from "./BlocText";
 import TitleLevel2 from "./TitleLevel2";
+import SectionComponents from "./SectionComponents";
 
 const booksArray = [
   {
@@ -61,88 +62,92 @@ const ludicArray = [
 
 export default function Resources() {
   return (
-    <div className="flex flex-col items-center gap-y-8">
-      <Title title="< Resources />" />
+    <SectionComponents>
+      <div className="flex flex-col items-center gap-y-8">
+        <Title title="< Resources />" />
 
-      <BlocText>
-        <TitleLevel2 title="Books" />
-        {booksArray.map((book) => {
-          return (
-            <div
-              key={book.title}
-              className="flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 sm:p-6 rounded-xl"
-            >
-              <figure className="w-24 sm:mr-6">
-                <img
-                  src={book.img}
-                  alt={`livre ${book.title}`}
-                  className="object-cover h-full w-full"
-                />
-              </figure>
+        <BlocText>
+          <TitleLevel2 title="Books" />
+          {booksArray.map((book) => {
+            return (
+              <div
+                key={book.title}
+                className="flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 sm:p-6 rounded-xl"
+              >
+                <figure className="w-24 sm:mr-6">
+                  <img
+                    src={book.img}
+                    alt={`livre ${book.title}`}
+                    className="object-cover h-full w-full"
+                  />
+                </figure>
 
-              <div className="sm:w-40 text-center sm:text-start sm:mr-12 ">
-                <p className="font-bold">{book.title}</p>
-                <p>{book.author}</p>
+                <div className="sm:w-40 text-center sm:text-start sm:mr-12 ">
+                  <p className="font-bold">{book.title}</p>
+                  <p>{book.author}</p>
+                </div>
+                <div className="w-80 p-2 text-justify">{book.description}</div>
               </div>
-              <div className="w-80 p-2 text-justify">{book.description}</div>
-            </div>
-          );
-        })}
-      </BlocText>
+            );
+          })}
+        </BlocText>
 
-      <BlocText>
-        <TitleLevel2 title="Podcasts" />
-        {podcastsArray.map((podcast) => {
-          return (
-            <div
-              key={podcast.title}
-              className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
-            >
-              <figure className="w-24 sm:mr-6">
-                <img
-                  src={podcast.img}
-                  alt={`livre ${podcast.title}`}
-                  className="object-cover h-full w-full"
-                />
-              </figure>
+        <BlocText>
+          <TitleLevel2 title="Podcasts" />
+          {podcastsArray.map((podcast) => {
+            return (
+              <div
+                key={podcast.title}
+                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
+              >
+                <figure className="w-24 sm:mr-6">
+                  <img
+                    src={podcast.img}
+                    alt={`livre ${podcast.title}`}
+                    className="object-cover h-full w-full"
+                  />
+                </figure>
 
-              <div className="sm:w-40 p-4 sm:mr-12 text-center sm:text-start">
-                <p className="font-bold">{podcast.title}</p>
-                <p>{podcast.author}</p>
+                <div className="sm:w-40 p-4 sm:mr-12 text-center sm:text-start">
+                  <p className="font-bold">{podcast.title}</p>
+                  <p>{podcast.author}</p>
+                </div>
+                <div className="w-80 p-2 text-justify">
+                  {podcast.description}
+                </div>
               </div>
-              <div className="w-80 p-2 text-justify">{podcast.description}</div>
-            </div>
-          );
-        })}
-      </BlocText>
-      <BlocText>
-        <TitleLevel2 title="Ludic Games" />
-        {ludicArray.map((ludic) => {
-          return (
-            <div
-              key={ludic.title}
-              className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
-            >
-              <figure className="w-24 sm:mr-6">
-                <img
-                  src={ludic.img}
-                  alt={`livre ${ludic.title}`}
-                  className="object-cover h-full w-full"
-                />
-              </figure>
+            );
+          })}
+        </BlocText>
+        <BlocText>
+          <TitleLevel2 title="Ludic Games" />
+          {ludicArray.map((ludic) => {
+            return (
+              <div
+                key={ludic.title}
+                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
+              >
+                <figure className="w-24 sm:mr-6">
+                  <img
+                    src={ludic.img}
+                    alt={`livre ${ludic.title}`}
+                    className="object-cover h-full w-full"
+                  />
+                </figure>
 
-              <div className="sm:w-40 p-4 sm:mr-12">
-                <a href={ludic.url} target="blank">
-                  <p className="font-bold hover:bg-lgHoverSolidBackground hover:text-lgSubBackground w-fit p-2 rounded-lg">
-                    {ludic.title}
-                  </p>
-                </a>
+                <div className="sm:w-40 p-4 sm:mr-12">
+                  <a href={ludic.url} target="blank">
+                    <p className="font-bold hover:bg-lgHoverSolidBackground hover:text-lgSubBackground w-fit p-2 rounded-lg">
+                      {ludic.title}
+                    </p>
+                  </a>
+                </div>
+                <div className="w-80 p-2 text-justify">{ludic.description}</div>
               </div>
-              <div className="w-80 p-2 text-justify">{ludic.description}</div>
-            </div>
-          );
-        })}
-      </BlocText>
-    </div>
+            );
+          })}
+        </BlocText>
+      </div>
+    </SectionComponents>
   );
 }

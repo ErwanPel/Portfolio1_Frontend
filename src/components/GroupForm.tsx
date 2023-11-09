@@ -12,8 +12,8 @@ export default function GroupForm({ children }: GroupFormProps) {
     <div
       className={
         theme === "dark"
-          ? "w-[400px]  text-blTextMin  flex flex-col gap-y-4 items-start"
-          : "w-[400px] text-lgTextMax   flex flex-col gap-y-4 items-start"
+          ? "w-[300px] sm:w-[400px] text-blTextMin  flex flex-col gap-y-4 items-start"
+          : "w-[300px] sm:w-[400px] text-lgTextMax   flex flex-col gap-y-4 items-start"
       }
     >
       {children}

@@ -134,7 +134,7 @@ export default function Contact() {
           <p className="text-lgTextMin dark:text-blTextMin">{success}</p>
         )}
       </form>
-      <nav className="flex gap-x-3 justify-center mt-16">
+      <nav className="flex gap-x-3 flex-col items-center gap-y-4 sm:flex-row justify-center mt-16">
         <ButtonLink
           icon={faGithub}
           link="https://github.com/ErwanPel"
