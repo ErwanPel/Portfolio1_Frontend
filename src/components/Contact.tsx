@@ -36,7 +36,7 @@ export default function Contact() {
     setError("");
     try {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const response = await axios.post(
+      await axios.post(
         "https://site--marvel-backend--fwddjdqr85yq.code.run/portfolio",
         data,
         {
