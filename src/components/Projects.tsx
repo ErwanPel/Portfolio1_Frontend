@@ -17,6 +17,8 @@ import SideNaveProjects from "./SideNavProjects";
 import TitleLevel2 from "./TitleLevel2";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export default function Projects() {
   const [nameProjects, setNameProjects] = useState<string | null>(null);
@@ -26,12 +28,10 @@ export default function Projects() {
     window.innerWidth < 1280 ? true : false
   );
 
+  const { language } = useSelector((store: RootState) => store.language);
   const { theme } = useSelector((store: RootState) => store.theme);
 
   const changePage = (direction: string) => {
-    console.log(direction);
-    console.log(arrayProjects[id], id);
-
     if (direction === "left") {
       if (id === 0) {
         setID(() => 3);
@@ -58,19 +58,13 @@ export default function Projects() {
     }
   };
 
-  console.log(id, projects);
-
   return (
     <SectionComponents>
-      <Title title="< Projects >" />
+      <Title
+        title={language !== "en" ? en.Projects.title : fr.Projects.title}
+      />
       <BlocText>
-        <p>
-          Ici vous pouvez voir quelques projets que j'ai crées durant la
-          formation. En plus des fonctionnalités de l'application, je m'attache
-          à intégrer des concepts qui me semblent indispensables comme
-          l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes
-          créations.
-        </p>
+        <p>{language !== "en" ? en.Projects.head : fr.Projects.head}</p>
       </BlocText>
       <SideNaveProjects
         projects={projects}
@@ -92,8 +86,8 @@ export default function Projects() {
               icon={faAngleLeft}
               className={
                 theme === "dark"
-                  ? " text-blTextMin text-[24px] p-2  hover:bg-blHoverBackgroundElement rounded-full"
-                  : "text-lgTextMin  text-[24px] p-2  hover:bg-lgHoverBackgroundElement rounded-full"
+                  ? " text-blTextMin text-[24px] p-2 active:opacity-70  hover:bg-blHoverBackgroundElement rounded-full"
+                  : "text-lgTextMin  text-[24px] p-2 active:opacity-70  hover:bg-lgHoverBackgroundElement rounded-full"
               }
             />
           </button>
@@ -105,8 +99,8 @@ export default function Projects() {
               icon={faAngleRight}
               className={
                 theme === "dark"
-                  ? " text-blTextMin text-[24px] p-2  hover:bg-blHoverBackgroundElement rounded-full"
-                  : "text-lgTextMin  text-[24px] p-2  hover:bg-lgHoverBackgroundElement rounded-full"
+                  ? " text-blTextMin text-[24px] p-2 active:opacity-70  hover:bg-blHoverBackgroundElement rounded-full"
+                  : "text-lgTextMin  text-[24px] p-2 active:opacity-70  hover:bg-lgHoverBackgroundElement rounded-full"
               }
             />
           </button>
@@ -138,7 +132,11 @@ export default function Projects() {
           })}
         </article>
         <BlocText>
-          <p>{projects.description}</p>
+          <p>
+            {language !== "en"
+              ? projects.description_en
+              : projects.description_fr}
+          </p>
         </BlocText>
 
         <nav className="flex mt-6 justify-center gap-x-4 gap-y-4 flex-wrap">
@@ -156,7 +154,7 @@ export default function Projects() {
             <ButtonLink
               icon={faArrowUpRightFromSquare}
               link={projects.urlLink}
-              name={`site de ${projects.name}`}
+              name={`Site ${projects.name}`}
             />
           )}
         </nav>

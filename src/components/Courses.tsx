@@ -4,12 +4,15 @@ import SectionComponents from "./SectionComponents";
 import BlocText from "./BlocText";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export default function Courses() {
+  const { language } = useSelector((store: RootState) => store.language);
   const { theme } = useSelector((store: RootState) => store.theme);
   return (
     <SectionComponents>
-      <Title title="< Courses />" />
+      <Title title={language !== "en" ? en.Courses.title : fr.Courses.title} />
       <BlocText>
         <div className="flex gap-x-2 items-center mb-4">
           <img src={logoReacteur} className="w-6 h-6" />
@@ -29,8 +32,7 @@ export default function Courses() {
           </h2>
         </div>
         <p className="italic">
-          Concepteur d'Application Web et Mobile · Avril à Octobre 2023 · Temps
-          partiel
+          {language !== "en" ? en.Courses.subtitle : fr.Courses.subtitle}
         </p>
         <p
           className={
@@ -39,7 +41,7 @@ export default function Courses() {
               : "my-4 font-bold underline underline-offset-4 text-lgTextMin "
           }
         >
-          Compétences acquises :{" "}
+          {language !== "en" ? en.Courses.section : fr.Courses.section}
         </p>
         <ul>
           <li
@@ -49,7 +51,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Algorithmie,
+            {language !== "en" ? en.Courses._1item : fr.Courses._1item}
           </li>
           <li
             className={
@@ -76,7 +78,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Dévelopement et déploiement d'un projet back-end Node.js,
+            {language !== "en" ? en.Courses._2item : fr.Courses._2item}
           </li>
           <li
             className={
@@ -85,7 +87,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Création d'une API REST,
+            {language !== "en" ? en.Courses._3item : fr.Courses._3item}
           </li>
           <li
             className={
@@ -94,7 +96,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Gestion de bases de données MongoDB,
+            {language !== "en" ? en.Courses._4item : fr.Courses._4item}
           </li>
           <li
             className={
@@ -103,7 +105,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Développement et déploiement d'un projet front-end web React.js,
+            {language !== "en" ? en.Courses._5item : fr.Courses._5item}
           </li>
           <li
             className={
@@ -112,8 +114,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Développement et déploiement d'un projet front-end mobile React
-            Native,
+            {language !== "en" ? en.Courses._6item : fr.Courses._6item}
           </li>
           <li
             className={
@@ -122,7 +123,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Création d'un projet web avec le framework Next 12 / 13,
+            {language !== "en" ? en.Courses._7item : fr.Courses._7item}
           </li>
           <li
             className={
@@ -131,7 +132,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            Mise en place de test unitaire avec Jest.js,
+            {language !== "en" ? en.Courses._8item : fr.Courses._8item}
           </li>
         </ul>
       </BlocText>

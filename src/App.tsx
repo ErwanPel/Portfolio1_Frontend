@@ -12,15 +12,14 @@ function App() {
   return (
     <>
       <Header />
-
       <main
         className={
           theme === "dark"
-            ? "w-screen bg-blBackground "
+            ? "w-screen  bg-blBackground "
             : "w-screen  bg-lgBackground"
         }
       >
-        <div className=" flex items-start container sm:container md:container xl:container w-[350px] xl:w-[1024px] justify-center sm:px-8   min-h-screen mx-auto overflow-hidden py-12">
+        <div className=" flex items-start  container sm:container md:container xl:container w-[350px] xl:w-[1024px] justify-center sm:px-8   min-h-screen mx-auto overflow-hidden py-12">
           <AnimatePresence>
             <BlocContent />
           </AnimatePresence>

@@ -2,11 +2,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export type TLanguage = {
-  language: "fr" | "en";
+  language: "fr" | "en" | string;
 };
 
 const initialState: TLanguage = {
-  language: "en",
+  language: localStorage.getItem("language") || "en",
 };
 
 const languageSlice = createSlice({
@@ -15,9 +15,11 @@ const languageSlice = createSlice({
   reducers: {
     setEnglish: (state: TLanguage) => {
       state.language = "en";
+      localStorage.setItem("language", "en");
     },
     setFrench: (state: TLanguage) => {
       state.language = "fr";
+      localStorage.setItem("language", "fr");
     },
   },
 });

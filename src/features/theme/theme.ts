@@ -5,7 +5,7 @@ type Theme = {
 };
 
 const initialState: Theme = {
-  theme: "light" || localStorage.getItem("theme"),
+  theme: localStorage.getItem("theme") || "light",
 };
 
 const themeSlice = createSlice({

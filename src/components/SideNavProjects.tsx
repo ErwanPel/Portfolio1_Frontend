@@ -52,11 +52,11 @@ export default function SideNaveProjects({
             className={
               projects.name === img.name
                 ? theme === "dark"
-                  ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator opacity-30"
-                  : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator opacity-30"
+                  ? "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator opacity-30"
+                  : "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator opacity-30"
                 : theme === "dark"
-                ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator"
-                : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator "
+                ? "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator"
+                : "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator "
             }
           >
             {nameProjects === img.name ? (
@@ -105,11 +105,11 @@ export default function SideNaveProjects({
             className={
               projects.name === img.name
                 ? theme === "dark"
-                  ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator opacity-30"
-                  : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator opacity-30"
+                  ? "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator opacity-30"
+                  : "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator opacity-30"
                 : theme === "dark"
-                ? "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator"
-                : "rounded-lg sm:rounded-xl hover:cursor-pointer h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator "
+                ? "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border  border-blElementSeparator"
+                : "rounded-lg sm:rounded-xl hover:cursor-pointer active:opacity-80 h-16 w-16 sm:h-28 sm:w-28 border border-lgElementSeparator "
             }
           >
             {nameProjects === img.name ? (

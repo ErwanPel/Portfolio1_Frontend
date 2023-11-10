@@ -7,6 +7,7 @@ import {
   faMoon,
   faSun,
   faEllipsisVertical,
+  faLanguage,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { setLightMode, setDarkMode } from "../features/theme/theme";
@@ -39,35 +40,53 @@ export default function Header() {
         <div
           className={
             theme === "dark"
-              ? "h-[150px] container sm:w-[1024px] sm:mx-auto  bg-blBackground text-3xl flex flex-col items-center justify-center"
-              : "h-[150px] container sm:w-[1024px] sm:mx-auto bg-lgBackground text-3xl flex flex-col items-center justify-center"
+              ? "h-[150px] container sm:w-[1024px] sm:mx-auto  bg-blBackground text-3xl flex flex-col items-center justify-center active:opacity-70"
+              : "h-[150px] container sm:w-[1024px] sm:mx-auto bg-lgBackground text-3xl flex flex-col items-center justify-center active:opacity-70"
           }
         >
           {!openMenu && (
             <nav className="flex w-full justify-between items-center mb-12">
-              <button
-                onClick={handleToggleTheme}
-                className={
-                  theme === "dark"
-                    ? "self-start  ml-8 hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl"
-                    : "self-start  ml-8 hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl"
-                }
-              >
-                {theme === "dark" ? (
-                  <FontAwesomeIcon icon={faSun} color="#0BD8B6" />
-                ) : (
-                  <FontAwesomeIcon icon={faMoon} color="#008573" />
-                )}
-              </button>
-              <button
-                onClick={() =>
-                  language === "en"
-                    ? dispatch(setFrench())
-                    : dispatch(setEnglish())
-                }
-              >
-                {language}
-              </button>
+              <div className="flex items-center gap-x-12">
+                <button
+                  onClick={handleToggleTheme}
+                  className={
+                    theme === "dark"
+                      ? "self-start  ml-8 hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl"
+                      : "self-start  ml-8 hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl"
+                  }
+                >
+                  {theme === "dark" ? (
+                    <FontAwesomeIcon icon={faSun} color="#0BD8B6" />
+                  ) : (
+                    <FontAwesomeIcon icon={faMoon} color="#008573" />
+                  )}
+                </button>
+                <button
+                  className={
+                    theme === "dark"
+                      ? "border p-2 flex items-center gap-x-4 rounded-2xl bg-blBackgroundElement border-blTextMax hover:bg-blHoverBackgroundElement active:opacity-70"
+                      : "border p-2 flex items-center gap-x-4 rounded-2xl bg-lgBackgroundElement border-lgTextMax hover:bg-lgHoverBackgroundElement active:opacity-70"
+                  }
+                  onClick={() =>
+                    language === "en"
+                      ? dispatch(setFrench())
+                      : dispatch(setEnglish())
+                  }
+                >
+                  <FontAwesomeIcon
+                    icon={faLanguage}
+                    color={theme === "dark" ? "#0BD8B6" : "#008573"}
+                  />
+                  <span
+                    className={
+                      theme === "dark" ? "text-blTextMin" : "text-lgTextMin"
+                    }
+                  >
+                    {language}
+                  </span>
+                </button>
+              </div>
+
               <button
                 onClick={() =>
                   openMenu ? dispatch(setCloseMenu()) : dispatch(setOpenMenu())

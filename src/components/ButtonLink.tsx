@@ -17,8 +17,8 @@ export default function ButtonLink({ icon, link, name }: TLinkProps) {
       target="blank"
       className={
         theme === "dark"
-          ? " bg-blButton px-3 py-2 rounded-3xl flex items-center justify-center hover:bg-lgElementSeparator hover:bg-blElementSeparator"
-          : "bg-lgButton  px-3 py-2 rounded-3xl flex items-center justify-center hover:bg-lgElementSeparator hover:bg-blElementSeparator"
+          ? " bg-blButton px-3 py-2 active:opacity-70 rounded-3xl flex items-center justify-center hover:bg-blElementSeparator"
+          : "bg-lgButton  px-3 py-2 active:opacity-70 rounded-3xl flex items-center justify-center hover:bg-lgElementSeparator "
       }
     >
       <LinkToSocialMedia icon={icon} />

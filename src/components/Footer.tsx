@@ -1,7 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export default function Footer() {
+  const { language } = useSelector((store: RootState) => store.language);
   const { theme } = useSelector((store: RootState) => store.theme);
   return (
     <footer
@@ -12,7 +15,9 @@ export default function Footer() {
       }
     >
       <p>
-        Made by <strong>Erwan Pellerin</strong> with{" "}
+        {language !== "en" ? en.Footer.first : fr.Footer.first}
+        <strong>Erwan Pellerin</strong>{" "}
+        {language !== "en" ? en.Footer.second : fr.Footer.second}{" "}
         <span
           className={
             theme === "dark"

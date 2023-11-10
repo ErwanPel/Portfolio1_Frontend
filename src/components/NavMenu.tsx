@@ -12,8 +12,11 @@ import {
 import SeparatorMenu from "./SeparatorMenu";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export default function NavMenu() {
+  const { language } = useSelector((store: RootState) => store.language);
   const { choice } = useSelector((store: RootState) => store.category);
   const { theme } = useSelector((store: RootState) => store.theme);
   const dispatch: AppDispatch = useDispatch();
@@ -50,15 +53,15 @@ export default function NavMenu() {
         className={
           choice === null
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5  py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5  py-3   bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToHome())}
       >
-        Home
+        {language !== "en" ? en.Menu.Home : fr.Menu.Home}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -66,15 +69,15 @@ export default function NavMenu() {
         className={
           choice === "about Me"
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToAboutMe())}
       >
-        About Me
+        {language !== "en" ? en.Menu.AboutMe : fr.Menu.AboutMe}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -82,15 +85,15 @@ export default function NavMenu() {
         className={
           choice === "projects"
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToProjects())}
       >
-        Projects
+        {language !== "en" ? en.Menu.Projects : fr.Menu.Projects}
       </motion.button>
       <SeparatorMenu />
 
@@ -99,15 +102,15 @@ export default function NavMenu() {
         className={
           choice === "courses"
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToCourse())}
       >
-        Courses
+        {language !== "en" ? en.Menu.Courses : fr.Menu.Courses}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -115,15 +118,15 @@ export default function NavMenu() {
         className={
           choice === "resources"
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToResources())}
       >
-        Resources
+        {language !== "en" ? en.Menu.Resources : fr.Menu.Resources}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -131,11 +134,11 @@ export default function NavMenu() {
         className={
           choice === "contacts"
             ? theme === "dark"
-              ? ` text-blTextMin text-xl w-fit px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
-              : `text-lgTextMin  text-xl w-fit px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
+              ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  bg-blSelectedBackgroundElement  hover:bg-blHoverBackgroundElement `
+              : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 bg-lgSelectedBackgroundElement  hover:bg-lgHoverBackgroundElement  `
             : theme === "dark"
-            ? ` text-blTextMin text-xl w-fit px-5 py-3  hover:bg-blHoverBackgroundElement `
-            : `text-lgTextMin  text-xl w-fit px-5 py-3 hover:bg-lgHoverBackgroundElement `
+            ? ` text-blTextMin text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3  hover:bg-blHoverBackgroundElement `
+            : `text-lgTextMin  text-xl w-fit active:opacity-70 sm:px-2 md:px-5 py-3 hover:bg-lgHoverBackgroundElement `
         }
         onClick={() => dispatch(goToContacts())}
       >

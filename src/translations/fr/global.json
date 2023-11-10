@@ -1,12 +1,12 @@
 {
   "Home": {
-    "title": "< Bienvenue />",
+    "title": "< Accueil />",
     "first": "Bienvenue, je suis",
     "second": "Developpeur junior Full-Stack",
     "third": "Voici mon portfolio"
   },
   "AboutMe": {
-    "title": "< A propos />",
+    "title": "< À propos />",
     "first": "Hello ! Je m'appelle Erwan Pellerin et je suis ",
     "job": "développeur Full-Stack Web et Mobile junior",
     "firstbis": ". J'ai exercé le métier de psychomotricien durant 8 ans au sein de structures médico-sociaux, un métier nécessitant de la curiosité, de l'adaptation, de la créativité, une gestion du stress ainsi qu'une bonne qualité d'écoute et d'observation.",
@@ -14,5 +14,51 @@
     "secondBis": " en Janvier 2023 et je me suis formé à l'école du ",
     "secondTer": " d'Avril à Octobre 2023. Ce bootcamp m'a permis d'obtenir de solides compétences en tant que développeur Full-Stack Web et Mobile.",
     "section": "Compétences"
+  },
+  "Projects": {
+    "title": "< Projets />",
+    "head": "Ici vous pouvez voir quelques projets que j'ai crées durant la formation. En plus des fonctionnalités de l'application, je m'attache à intégrer des concepts qui me semblent indispensables comme l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes créations."
+  },
+  "Courses": {
+    "title": "< Formations />",
+    "subtitle": "Concepteur d'Application Web et Mobile · Avril à Octobre 2023 · Temps partiel",
+    "section": "Compétences acquises :",
+    "_1item": "Algorithmie,",
+    "_2item": "Dévelopement et déploiement d'un projet back-end Node.js,",
+    "_3item": "Création d'une API REST,",
+    "_4item": "Gestion de bases de données MongoDB,",
+    "_5item": "Développement et déploiement d'un projet front-end web React.js,",
+    "_6item": "Développement et déploiement d'un projet front-end mobile React Native,",
+    "_7item": "Création d'un projet web avec le framework Next 12 / 13,",
+    "_8item": "Mise en place de test unitaire avec Jest.js,"
+  },
+  "Ressources": {
+    "title": "< Ressources />",
+    "description": "Dans cette section, je partage des ressources m'ayant servit pour approfondir mes compétences en programmation mais également sur des sujets plus vaste dans le monde de l'informatique."
+  },
+  "Contacts": {
+    "labelName": "Veuillez saisir votre nom :",
+    "name": "Votre nom",
+    "nameError": "La chaîne doit contenir au moins 2 caractère(s)",
+    "labelEmail": "Veuillez saisir votre email :",
+    "email": "Votre email",
+    "emailError": "Email invalide",
+    "labelMessage": "Veuillez saisir votre message:",
+    "message": "Votre message",
+    "button": "ENVOYER",
+    "success": "Votre message a été envoyé",
+    "error": "Une erreur s'est produite"
+  },
+  "Footer": {
+    "first": "Crée et déployé par ",
+    "second": "avec"
+  },
+  "Menu": {
+    "Home": "Accueil",
+    "AboutMe": "À propos",
+    "Projects": "Projets",
+    "Courses": "Formations",
+    "Resources": "Ressources",
+    "Contacts": "Contacts"
   }
 }

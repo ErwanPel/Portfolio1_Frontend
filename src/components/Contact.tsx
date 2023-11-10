@@ -9,6 +9,10 @@ import ButtonLink from "./ButtonLink";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../features/store";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export type TFormData = {
   name: string;
@@ -25,6 +29,8 @@ const formSchema = z.object({
 export default function Contact() {
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
+
+  const { language } = useSelector((store: RootState) => store.language);
 
   const {
     register,
@@ -51,8 +57,6 @@ export default function Contact() {
     }
   };
 
-  console.log(errors);
-
   return (
     <SectionComponents>
       <Title title="< Contacts />" />
@@ -62,12 +66,14 @@ export default function Contact() {
       >
         <GroupForm>
           <label className=" text-lg" htmlFor="name">
-            Please enter your name :
+            {language !== "en" ? en.Contacts.labelName : fr.Contacts.labelName}
           </label>
           <input
             type="text"
             id="name"
-            placeholder="Your name"
+            placeholder={
+              language !== "en" ? en.Contacts.name : fr.Contacts.name
+            }
             {...register("name")}
             className={
               errors.name
@@ -77,19 +83,25 @@ export default function Contact() {
           />
           {errors.name && (
             <p className="text-red-700 dark:text-red-300">
-              {errors.name.message}
+              {language !== "en"
+                ? en.Contacts.nameError
+                : fr.Contacts.nameError}
             </p>
           )}{" "}
         </GroupForm>
 
         <GroupForm>
           <label className="text-lg" htmlFor="email">
-            Please enter your email :
+            {language !== "en"
+              ? en.Contacts.labelEmail
+              : fr.Contacts.labelEmail}
           </label>
           <input
             type="email"
             id="email"
-            placeholder="Your email"
+            placeholder={
+              language !== "en" ? en.Contacts.email : fr.Contacts.email
+            }
             {...register("email")}
             className={
               errors.email
@@ -99,17 +111,23 @@ export default function Contact() {
           />
           {errors.email && (
             <p className="text-red-700 dark:text-red-300">
-              {errors.email.message}
+              {language !== "en"
+                ? en.Contacts.emailError
+                : fr.Contacts.emailError}
             </p>
           )}
         </GroupForm>
         <GroupForm>
           <label className=" text-lg" htmlFor="message">
-            Please enter your message :
+            {language !== "en"
+              ? en.Contacts.labelMessage
+              : fr.Contacts.labelMessage}
           </label>
           <textarea
             id="message"
-            placeholder="Your Message"
+            placeholder={
+              language !== "en" ? en.Contacts.message : fr.Contacts.message
+            }
             {...register("message")}
             className={
               errors.message
@@ -119,19 +137,27 @@ export default function Contact() {
           />
           {errors.message && (
             <p className="text-red-700 dark:text-red-300">
-              {errors.message.message}
+              {language !== "en"
+                ? en.Contacts.nameError
+                : fr.Contacts.nameError}
             </p>
           )}
         </GroupForm>
         <button
           type="submit"
-          className="bg-lgButton h-12 w-24 text-white rounded-2xl hover:bg-lgElementSeparator dark:hover:bg-blElementSeparator"
+          className="bg-lgButton active:opacity-70 h-12 w-24 text-white rounded-2xl hover:bg-lgElementSeparator dark:hover:bg-blElementSeparator"
         >
-          SEND
+          {language !== "en" ? en.Contacts.button : fr.Contacts.button}
         </button>
-        {error && <p className="text-red-700 dark:text-red-300">{error}</p>}
+        {error && (
+          <p className="text-red-700 dark:text-red-300">
+            {language !== "en" ? en.Contacts.error : fr.Contacts.error}
+          </p>
+        )}
         {success && (
-          <p className="text-lgTextMin dark:text-blTextMin">{success}</p>
+          <p className="text-lgTextMin dark:text-blTextMin">
+            {language !== "en" ? en.Contacts.success : fr.Contacts.success}
+          </p>
         )}
       </form>
       <nav className="flex gap-x-3 flex-col items-center gap-y-4 sm:flex-row justify-center mt-16">
