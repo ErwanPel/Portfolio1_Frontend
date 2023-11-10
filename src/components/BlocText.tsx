@@ -12,8 +12,8 @@ export default function BlocText({ children }: BlocTextChildrenProps) {
     <article
       className={
         theme === "dark"
-          ? "text-justify my-8 text-lg lg:w-[720px] text-blTextMin bg-blBackgroundElement p-4 rounded-3xl"
-          : "text-justify my-8 text-lg lg:w-[720px] text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl"
+          ? "text-justify my-8 text-lg lg:w-[720px] text-blTextMin bg-blBackgroundElement p-4 rounded-3xl mx-auto"
+          : "text-justify my-8 text-lg lg:w-[720px] text-lgTextMax bg-lgBackgroundElement p-4 rounded-3xl mx-auto"
       }
     >
       {children}

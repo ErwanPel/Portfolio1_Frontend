@@ -107,7 +107,11 @@ export default function Projects() {
         </nav>
         <figure className="mt-10 self-center w-fit sm:h-[500px]  rounded-lg">
           <img
-            className="object-contain w-full h-full rounded-lg"
+            className={
+              theme === "dark"
+                ? "object-contain w-full h-full rounded-lg border-2 border-blBorder"
+                : "object-contain w-full h-full rounded-lg border-2 border-lgBorder"
+            }
             src={projects.picture}
             alt={`photo du projet ${projects.name}`}
           />
@@ -115,8 +119,8 @@ export default function Projects() {
         <article
           className={
             theme === "dark"
-              ? "border-2  border-blTextMax rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
-              : "border-2 border-lgTextMax rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
+              ? "border-2  border-blBorder rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
+              : "border-2 border-lgBorder rounded-3xl sm:rounded-full py-4 px-6 flex items-center mx-auto justify-around  gap-y-4 flex-wrap sm:w-fit gap-x-12 mt-6 sm:my-10"
           }
         >
           {projects.stacks.map((stack) => {
@@ -161,8 +165,8 @@ export default function Projects() {
         <img
           className={
             theme === "dark"
-              ? "mt-24 rounded-xl mx-auto "
-              : "mt-24 rounded-xl mx-auto border-2 border-black"
+              ? "mt-24 rounded-xl mx-auto border-2 border-blBorder"
+              : "mt-24 rounded-xl mx-auto border-2 border-lgBorder"
           }
           src={projects.video}
           alt=""
