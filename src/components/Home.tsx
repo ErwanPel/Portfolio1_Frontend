@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <SectionComponents>
-      <Title title={language === "en" ? en.Home.title : fr.Home.title} />
+      <Title title={language !== "en" ? en.Home.title : fr.Home.title} />
       <div className="flex flex-col gap-y-16 lg:flex-row sm:justify-between items-center gap-x-12">
         <div className="flex flex-col items-center mt-4 gap-y-2 sm:items-start ">
           <p
@@ -25,7 +25,7 @@ export default function Home() {
                 : "text-3xl mb-4 text-lgTextMin "
             }
           >
-            {language === "en" ? en.Home.first : fr.Home.first}
+            {language !== "en" ? en.Home.first : fr.Home.first}
           </p>
           <p
             className={
@@ -43,7 +43,7 @@ export default function Home() {
                 : "text-xl sm:text-3xl  text-lgTextMin "
             }
           >
-            {language === "en" ? en.Home.second : fr.Home.second}
+            {language !== "en" ? en.Home.second : fr.Home.second}
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
             : "mt-24 text-3xl text-center sm:text-start sm:text-5xl text-lgTextMin "
         }
       >
-        {language === "en" ? en.Home.third : fr.Home.third}
+        {language !== "en" ? en.Home.third : fr.Home.third}
       </p>
       <nav className="flex gap-x-3 flex-wrap mt-12 gap-y-4 justify-center sm:justify-start">
         <ButtonLink

@@ -66,13 +66,13 @@ export default function Contact() {
       >
         <GroupForm>
           <label className=" text-lg" htmlFor="name">
-            {language !== "en" ? en.Contacts.labelName : fr.Contacts.labelName}
+            {language === "en" ? en.Contacts.labelName : fr.Contacts.labelName}
           </label>
           <input
             type="text"
             id="name"
             placeholder={
-              language !== "en" ? en.Contacts.name : fr.Contacts.name
+              language === "en" ? en.Contacts.name : fr.Contacts.name
             }
             {...register("name")}
             className={
@@ -83,7 +83,7 @@ export default function Contact() {
           />
           {errors.name && (
             <p className="text-red-700 dark:text-red-300">
-              {language !== "en"
+              {language === "en"
                 ? en.Contacts.nameError
                 : fr.Contacts.nameError}
             </p>
@@ -92,7 +92,7 @@ export default function Contact() {
 
         <GroupForm>
           <label className="text-lg" htmlFor="email">
-            {language !== "en"
+            {language === "en"
               ? en.Contacts.labelEmail
               : fr.Contacts.labelEmail}
           </label>
@@ -100,7 +100,7 @@ export default function Contact() {
             type="email"
             id="email"
             placeholder={
-              language !== "en" ? en.Contacts.email : fr.Contacts.email
+              language === "en" ? en.Contacts.email : fr.Contacts.email
             }
             {...register("email")}
             className={
@@ -111,7 +111,7 @@ export default function Contact() {
           />
           {errors.email && (
             <p className="text-red-700 dark:text-red-300">
-              {language !== "en"
+              {language === "en"
                 ? en.Contacts.emailError
                 : fr.Contacts.emailError}
             </p>
@@ -119,14 +119,14 @@ export default function Contact() {
         </GroupForm>
         <GroupForm>
           <label className=" text-lg" htmlFor="message">
-            {language !== "en"
+            {language === "en"
               ? en.Contacts.labelMessage
               : fr.Contacts.labelMessage}
           </label>
           <textarea
             id="message"
             placeholder={
-              language !== "en" ? en.Contacts.message : fr.Contacts.message
+              language === "en" ? en.Contacts.message : fr.Contacts.message
             }
             {...register("message")}
             className={
@@ -137,9 +137,9 @@ export default function Contact() {
           />
           {errors.message && (
             <p className="text-red-700 dark:text-red-300">
-              {language !== "en"
-                ? en.Contacts.nameError
-                : fr.Contacts.nameError}
+              {language === "en"
+                ? en.Contacts.messageError
+                : fr.Contacts.messageError}
             </p>
           )}
         </GroupForm>
@@ -147,16 +147,16 @@ export default function Contact() {
           type="submit"
           className="bg-lgButton active:opacity-70 h-12 w-24 text-white rounded-2xl hover:bg-lgElementSeparator dark:hover:bg-blElementSeparator"
         >
-          {language !== "en" ? en.Contacts.button : fr.Contacts.button}
+          {language === "en" ? en.Contacts.button : fr.Contacts.button}
         </button>
         {error && (
           <p className="text-red-700 dark:text-red-300">
-            {language !== "en" ? en.Contacts.error : fr.Contacts.error}
+            {language === "en" ? en.Contacts.error : fr.Contacts.error}
           </p>
         )}
         {success && (
           <p className="text-lgTextMin dark:text-blTextMin">
-            {language !== "en" ? en.Contacts.success : fr.Contacts.success}
+            {language === "en" ? en.Contacts.success : fr.Contacts.success}
           </p>
         )}
       </form>

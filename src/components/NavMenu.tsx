@@ -61,7 +61,7 @@ export default function NavMenu() {
         }
         onClick={() => dispatch(goToHome())}
       >
-        {language !== "en" ? en.Menu.Home : fr.Menu.Home}
+        {language === "en" ? en.Menu.Home : fr.Menu.Home}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -77,7 +77,7 @@ export default function NavMenu() {
         }
         onClick={() => dispatch(goToAboutMe())}
       >
-        {language !== "en" ? en.Menu.AboutMe : fr.Menu.AboutMe}
+        {language === "en" ? en.Menu.AboutMe : fr.Menu.AboutMe}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -93,7 +93,7 @@ export default function NavMenu() {
         }
         onClick={() => dispatch(goToProjects())}
       >
-        {language !== "en" ? en.Menu.Projects : fr.Menu.Projects}
+        {language === "en" ? en.Menu.Projects : fr.Menu.Projects}
       </motion.button>
       <SeparatorMenu />
 
@@ -110,7 +110,7 @@ export default function NavMenu() {
         }
         onClick={() => dispatch(goToCourse())}
       >
-        {language !== "en" ? en.Menu.Courses : fr.Menu.Courses}
+        {language === "en" ? en.Menu.Courses : fr.Menu.Courses}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -126,7 +126,7 @@ export default function NavMenu() {
         }
         onClick={() => dispatch(goToResources())}
       >
-        {language !== "en" ? en.Menu.Resources : fr.Menu.Resources}
+        {language === "en" ? en.Menu.Resources : fr.Menu.Resources}
       </motion.button>
       <SeparatorMenu />
       <motion.button

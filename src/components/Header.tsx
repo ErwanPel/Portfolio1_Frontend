@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import {
   faMoon,
   faSun,
-  faEllipsisVertical,
+  faBars,
   faLanguage,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,65 +40,62 @@ export default function Header() {
         <div
           className={
             theme === "dark"
-              ? "h-[150px] container sm:w-[1024px] sm:mx-auto  bg-blBackground text-3xl flex flex-col items-center justify-center active:opacity-70"
-              : "h-[150px] container sm:w-[1024px] sm:mx-auto bg-lgBackground text-3xl flex flex-col items-center justify-center active:opacity-70"
+              ? "h-[150px] container sm:w-[1024px] sm:mx-auto  bg-blBackground text-3xl flex flex-col items-center justify-center active:opacity-70 "
+              : "h-[150px] container sm:w-[1024px] sm:mx-auto bg-lgBackground text-3xl flex flex-col items-center justify-center active:opacity-70 "
           }
         >
           {!openMenu && (
             <nav className="flex w-full justify-between items-center mb-12">
-              <div className="flex items-center gap-x-12">
-                <button
-                  onClick={handleToggleTheme}
+              <button
+                onClick={handleToggleTheme}
+                className={
+                  theme === "dark"
+                    ? "self-start  ml-8 hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl"
+                    : "self-start  ml-8 hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl"
+                }
+              >
+                {theme === "dark" ? (
+                  <FontAwesomeIcon icon={faSun} color="#0BD8B6" />
+                ) : (
+                  <FontAwesomeIcon icon={faMoon} color="#008573" />
+                )}
+              </button>
+              <button
+                className={
+                  theme === "dark"
+                    ? "border-2 p-2 flex items-center gap-x-4 rounded-2xl  border-blBorder hover:bg-blHoverBackgroundElement active:opacity-70"
+                    : "border-2 p-2 flex items-center gap-x-4 rounded-2xl  border-lgBorder hover:bg-lgHoverBackgroundElement active:opacity-70"
+                }
+                onClick={() =>
+                  language === "en"
+                    ? dispatch(setFrench())
+                    : dispatch(setEnglish())
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faLanguage}
+                  color={theme === "dark" ? "#0BD8B6" : "#008573"}
+                />
+                <span
                   className={
-                    theme === "dark"
-                      ? "self-start  ml-8 hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl"
-                      : "self-start  ml-8 hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl"
+                    theme === "dark" ? "text-blTextMin" : "text-lgTextMin"
                   }
                 >
-                  {theme === "dark" ? (
-                    <FontAwesomeIcon icon={faSun} color="#0BD8B6" />
-                  ) : (
-                    <FontAwesomeIcon icon={faMoon} color="#008573" />
-                  )}
-                </button>
-                <button
-                  className={
-                    theme === "dark"
-                      ? "border p-2 flex items-center gap-x-4 rounded-2xl bg-blBackgroundElement border-blTextMax hover:bg-blHoverBackgroundElement active:opacity-70"
-                      : "border p-2 flex items-center gap-x-4 rounded-2xl bg-lgBackgroundElement border-lgTextMax hover:bg-lgHoverBackgroundElement active:opacity-70"
-                  }
-                  onClick={() =>
-                    language === "en"
-                      ? dispatch(setFrench())
-                      : dispatch(setEnglish())
-                  }
-                >
-                  <FontAwesomeIcon
-                    icon={faLanguage}
-                    color={theme === "dark" ? "#0BD8B6" : "#008573"}
-                  />
-                  <span
-                    className={
-                      theme === "dark" ? "text-blTextMin" : "text-lgTextMin"
-                    }
-                  >
-                    {language}
-                  </span>
-                </button>
-              </div>
-
+                  {language}
+                </span>
+              </button>
               <button
                 onClick={() =>
                   openMenu ? dispatch(setCloseMenu()) : dispatch(setOpenMenu())
                 }
                 className={
                   theme === "dark"
-                    ? "mr-14 sm:hidden hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl"
-                    : "mr-14 sm:hidden hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl"
+                    ? " border-2 border-blBorder sm:hidden hover:bg-blHoverBackgroundElement px-4 py-2 rounded-3xl mr-8"
+                    : " border-2 border-lgBorder sm:hidden hover:bg-lgHoverBackgroundElement px-4 py-2 rounded-3xl mr-8"
                 }
               >
                 <FontAwesomeIcon
-                  icon={faEllipsisVertical}
+                  icon={faBars}
                   color={theme === "dark" ? "#0BD8B6" : "#008573"}
                 />
               </button>

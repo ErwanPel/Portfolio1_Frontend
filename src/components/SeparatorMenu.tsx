@@ -7,7 +7,7 @@ export default function SeparatorMenu() {
     <div
       className={
         theme === "dark"
-          ? "border  border-blElementSeparator h-full"
+          ? "border border-blElementSeparator h-full"
           : "border border-lgElementSeparator  h-full"
       }
     ></div>

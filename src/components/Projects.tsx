@@ -24,9 +24,6 @@ export default function Projects() {
   const [nameProjects, setNameProjects] = useState<string | null>(null);
   const [id, setID] = useState<number>(0);
   const [projects, setProjects] = useState(arrayProjects[id]);
-  const [littleScreen] = useState<boolean>(
-    window.innerWidth < 1280 ? true : false
-  );
 
   const { language } = useSelector((store: RootState) => store.language);
   const { theme } = useSelector((store: RootState) => store.theme);
@@ -61,19 +58,18 @@ export default function Projects() {
   return (
     <SectionComponents>
       <Title
-        title={language !== "en" ? en.Projects.title : fr.Projects.title}
+        title={language === "en" ? en.Projects.title : fr.Projects.title}
       />
       <BlocText>
-        <p>{language !== "en" ? en.Projects.head : fr.Projects.head}</p>
+        <p>{language === "en" ? en.Projects.head : fr.Projects.head}</p>
       </BlocText>
       <SideNaveProjects
         projects={projects}
         changeProject={changeProject}
         nameProjects={nameProjects}
         setNameProjects={setNameProjects}
-        littleScreen={littleScreen}
       />
-      <section className="flex flex-col mt-8 ">
+      <section className="flex flex-col">
         <nav
           className={
             theme === "dark"
@@ -105,17 +101,16 @@ export default function Projects() {
             />
           </button>
         </nav>
-        <figure className="mt-10 self-center w-fit sm:h-[500px]  rounded-lg">
-          <img
-            className={
-              theme === "dark"
-                ? "object-contain w-full h-full rounded-lg border-2 border-blBorder"
-                : "object-contain w-full h-full rounded-lg border-2 border-lgBorder"
-            }
-            src={projects.picture}
-            alt={`photo du projet ${projects.name}`}
-          />
-        </figure>
+        <img
+          className={
+            theme === "dark"
+              ? "mt-10 rounded-xl mx-auto border-2 border-blBorder"
+              : "mt-10 rounded-xl mx-auto border-2 border-lgBorder"
+          }
+          src={projects.video}
+          alt=""
+        />
+
         <article
           className={
             theme === "dark"
@@ -137,7 +132,7 @@ export default function Projects() {
         </article>
         <BlocText>
           <p>
-            {language !== "en"
+            {language === "en"
               ? projects.description_en
               : projects.description_fr}
           </p>
@@ -162,15 +157,6 @@ export default function Projects() {
             />
           )}
         </nav>
-        <img
-          className={
-            theme === "dark"
-              ? "mt-24 rounded-xl mx-auto border-2 border-blBorder"
-              : "mt-24 rounded-xl mx-auto border-2 border-lgBorder"
-          }
-          src={projects.video}
-          alt=""
-        />
       </section>
     </SectionComponents>
   );

@@ -55,7 +55,7 @@ export default function NavMenuDropDown() {
     >
       <FontAwesomeIcon
         icon={faCircleXmark}
-        className="self-end mr-6 cursor-pointer text-2xl hover:opacity-70 active:opacity-50"
+        className="self-end mr-6 cursor-pointer text-3xl hover:opacity-70 active:opacity-50"
         onClick={() => dispatch(setCloseMenu())}
         color="#12A594"
       />
@@ -75,7 +75,7 @@ export default function NavMenuDropDown() {
           dispatch(setCloseMenu());
         }}
       >
-        {language !== "en" ? en.Menu.Home : fr.Menu.Home}
+        {language === "en" ? en.Menu.Home : fr.Menu.Home}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -94,7 +94,7 @@ export default function NavMenuDropDown() {
           dispatch(setCloseMenu());
         }}
       >
-        {language !== "en" ? en.Menu.AboutMe : fr.Menu.AboutMe}
+        {language === "en" ? en.Menu.AboutMe : fr.Menu.AboutMe}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -113,7 +113,7 @@ export default function NavMenuDropDown() {
           dispatch(setCloseMenu());
         }}
       >
-        {language !== "en" ? en.Menu.Projects : fr.Menu.Projects}
+        {language === "en" ? en.Menu.Projects : fr.Menu.Projects}
       </motion.button>
       <SeparatorMenu />
 
@@ -133,7 +133,7 @@ export default function NavMenuDropDown() {
           dispatch(setCloseMenu());
         }}
       >
-        {language !== "en" ? en.Menu.Courses : fr.Menu.Courses}
+        {language === "en" ? en.Menu.Courses : fr.Menu.Courses}
       </motion.button>
       <SeparatorMenu />
       <motion.button
@@ -152,7 +152,7 @@ export default function NavMenuDropDown() {
           dispatch(setCloseMenu());
         }}
       >
-        {language !== "en" ? en.Menu.Resources : fr.Menu.Resources}
+        {language === "en" ? en.Menu.Resources : fr.Menu.Resources}
       </motion.button>
       <SeparatorMenu />
       <motion.button

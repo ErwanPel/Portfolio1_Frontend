@@ -12,7 +12,7 @@ export default function Courses() {
   const { theme } = useSelector((store: RootState) => store.theme);
   return (
     <SectionComponents>
-      <Title title={language !== "en" ? en.Courses.title : fr.Courses.title} />
+      <Title title={language === "en" ? en.Courses.title : fr.Courses.title} />
       <BlocText>
         <div className="flex gap-x-2 items-center mb-4">
           <img src={logoReacteur} className="w-6 h-6" />
@@ -32,7 +32,7 @@ export default function Courses() {
           </h2>
         </div>
         <p className="italic">
-          {language !== "en" ? en.Courses.subtitle : fr.Courses.subtitle}
+          {language === "en" ? en.Courses.subtitle : fr.Courses.subtitle}
         </p>
         <p
           className={
@@ -41,7 +41,7 @@ export default function Courses() {
               : "my-4 font-bold underline underline-offset-4 text-lgTextMin "
           }
         >
-          {language !== "en" ? en.Courses.section : fr.Courses.section}
+          {language === "en" ? en.Courses.section : fr.Courses.section}
         </p>
         <ul>
           <li
@@ -51,7 +51,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._1item : fr.Courses._1item}
+            {language === "en" ? en.Courses._1item : fr.Courses._1item}
           </li>
           <li
             className={
@@ -78,7 +78,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._2item : fr.Courses._2item}
+            {language === "en" ? en.Courses._2item : fr.Courses._2item}
           </li>
           <li
             className={
@@ -87,7 +87,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._3item : fr.Courses._3item}
+            {language === "en" ? en.Courses._3item : fr.Courses._3item}
           </li>
           <li
             className={
@@ -96,7 +96,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._4item : fr.Courses._4item}
+            {language === "en" ? en.Courses._4item : fr.Courses._4item}
           </li>
           <li
             className={
@@ -105,7 +105,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._5item : fr.Courses._5item}
+            {language === "en" ? en.Courses._5item : fr.Courses._5item}
           </li>
           <li
             className={
@@ -114,7 +114,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._6item : fr.Courses._6item}
+            {language === "en" ? en.Courses._6item : fr.Courses._6item}
           </li>
           <li
             className={
@@ -123,7 +123,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._7item : fr.Courses._7item}
+            {language === "en" ? en.Courses._7item : fr.Courses._7item}
           </li>
           <li
             className={
@@ -132,7 +132,7 @@ export default function Courses() {
                 : "text-lgTextMin mb-1"
             }
           >
-            {language !== "en" ? en.Courses._8item : fr.Courses._8item}
+            {language === "en" ? en.Courses._8item : fr.Courses._8item}
           </li>
         </ul>
       </BlocText>

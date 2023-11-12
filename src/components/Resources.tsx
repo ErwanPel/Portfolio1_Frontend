@@ -10,8 +10,6 @@ import TitleLevel2 from "./TitleLevel2";
 import SectionComponents from "./SectionComponents";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
-import en from "../translations/en/global.json";
-import fr from "../translations/fr/global.json";
 
 const booksArray = [
   {
@@ -83,19 +81,12 @@ export default function Resources() {
       <div className="flex flex-col items-center gap-y-8">
         <Title title="< Resources />" />
         <BlocText>
-          <p>
-            {language !== "en"
-              ? en.Ressources.description
-              : fr.Ressources.description}
-          </p>
-        </BlocText>
-        <BlocText>
           <TitleLevel2 title="Books" />
           {booksArray.map((book) => {
             return (
               <div
                 key={book.title}
-                className="flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 sm:p-6 rounded-xl"
+                className="flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-4 rounded-xl"
               >
                 <figure className="w-24 sm:mr-6">
                   <img
@@ -110,7 +101,7 @@ export default function Resources() {
                   <p>{book.author}</p>
                 </div>
                 <div className="w-80 p-2 text-justify">
-                  {language !== "en"
+                  {language === "en"
                     ? book.description_en
                     : book.description_fr}
                 </div>
@@ -125,7 +116,7 @@ export default function Resources() {
             return (
               <div
                 key={podcast.title}
-                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
+                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-4 rounded-xl"
               >
                 <figure className="w-24 sm:mr-6">
                   <img
@@ -140,7 +131,7 @@ export default function Resources() {
                   <p>{podcast.author}</p>
                 </div>
                 <div className="w-80 p-2 text-justify">
-                  {language !== "en"
+                  {language === "en"
                     ? podcast.description_en
                     : podcast.description_fr}
                 </div>
@@ -154,7 +145,7 @@ export default function Resources() {
             return (
               <div
                 key={ludic.title}
-                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-6 rounded-xl"
+                className=" flex items-center flex-col sm:flex-row gap-y-4 sm:justify-between mb-6 p-4 rounded-xl"
               >
                 <figure className="w-24 sm:mr-6">
                   <img
@@ -172,7 +163,7 @@ export default function Resources() {
                   </a>
                 </div>
                 <div className="w-80 p-2 text-justify">
-                  {language !== "en"
+                  {language === "en"
                     ? ludic.description_en
                     : ludic.description_fr}
                 </div>

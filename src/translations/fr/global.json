@@ -39,11 +39,12 @@
   "Contacts": {
     "labelName": "Veuillez saisir votre nom :",
     "name": "Votre nom",
-    "nameError": "La chaîne doit contenir au moins 2 caractère(s)",
+    "nameError": "Le nom doit contenir au moins 2 caractère(s)",
     "labelEmail": "Veuillez saisir votre email :",
     "email": "Votre email",
     "emailError": "Email invalide",
     "labelMessage": "Veuillez saisir votre message:",
+    "messageError": "Le message doit contenir au moins 2 caractère(s)",
     "message": "Votre message",
     "button": "ENVOYER",
     "success": "Votre message a été envoyé",
