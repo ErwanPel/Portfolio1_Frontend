@@ -24,7 +24,7 @@ export default function SideNaveProjects({
       animate={{
         opacity: 1,
         transition: {
-          delay: 2,
+          delay: 1.7,
         },
       }}
       className={

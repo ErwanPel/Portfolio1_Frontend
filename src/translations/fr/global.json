@@ -9,7 +9,7 @@
     "title": "< À propos />",
     "first": "Hello ! Je m'appelle Erwan Pellerin et je suis ",
     "job": "développeur Full-Stack Web et Mobile junior",
-    "firstbis": ". J'ai exercé le métier de psychomotricien durant 8 ans au sein de structures médico-sociaux, un métier nécessitant de la curiosité, de l'adaptation, de la créativité, une gestion du stress ainsi qu'une bonne qualité d'écoute et d'observation.",
+    "firstbis": ". J'ai exercé le métier de psychomotricien durant 8 ans au sein de structures médico-sociales, un métier nécessitant de la curiosité, de l'adaptation, de la créativité, une gestion du stress ainsi qu'une bonne qualité d'écoute et d'observation.",
     "second": "Je suis passionné par l'informatique et les nouvelles technologies depuis mon enfance. Après avoir commencé à coder en python en autodidacte, le goût pour la programmation m'a engagé sur la voie de la reconversion professionnelle. Je me suis inscris au sein du club ",
     "secondBis": " en Janvier 2023 et je me suis formé à l'école du ",
     "secondTer": " d'Avril à Octobre 2023. Ce bootcamp m'a permis d'obtenir de solides compétences en tant que développeur Full-Stack Web et Mobile.",
@@ -17,7 +17,7 @@
   },
   "Projects": {
     "title": "< Projets />",
-    "head": "Ici vous pouvez voir quelques projets que j'ai crées durant la formation. En plus des fonctionnalités de l'application, je m'attache à intégrer des concepts qui me semblent indispensables comme l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes créations."
+    "head": "Ici vous pouvez voir quelques projets que j'ai créés durant la formation. En plus des fonctionnalités de l'application, je m'attache à intégrer des concepts qui me semblent indispensables comme l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes créations."
   },
   "Courses": {
     "title": "< Formations />",
@@ -30,7 +30,16 @@
     "_5item": "Développement et déploiement d'un projet front-end web React.js,",
     "_6item": "Développement et déploiement d'un projet front-end mobile React Native,",
     "_7item": "Création d'un projet web avec le framework Next 12 / 13,",
-    "_8item": "Mise en place de test unitaire avec Jest.js,"
+    "_8item": "Mise en place de test unitaire avec Jest.js,",
+    "openClass_1": "Concevez un contenu web accessible",
+    "openClass_2": "Simplifiez-vous le CSS avec Sass",
+    "openClass_3": "Créez des animations CSS modernes",
+    "openClass_4": "Sécurisez vos applications web avec l'OWASP",
+    "_timeVivreDuCode": "Inscrit depuis janvier 2023, l'apprentissage en ligne s'effectue au rythme de chacun",
+    "_1VivreDuCode": "Algorithmie et variables en Python",
+    "_2VivreDuCode": "Maquettage avec Penpot",
+    "_3VivreDuCode": "Installation et utilisation d'une machine virtuelle Linux avec Virtual Box",
+    "_4VivreDuCode": "Utilisation du terminal de commande"
   },
   "Ressources": {
     "title": "< Ressources />",
@@ -51,7 +60,7 @@
     "error": "Une erreur s'est produite"
   },
   "Footer": {
-    "first": "Crée et déployé par ",
+    "first": "Créé et déployé par ",
     "second": "avec"
   },
   "Menu": {

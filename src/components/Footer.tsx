@@ -15,9 +15,9 @@ export default function Footer() {
       }
     >
       <p>
-        {language !== "en" ? en.Footer.first : fr.Footer.first}
+        {language === "en" ? en.Footer.first : fr.Footer.first}
         <strong>Erwan Pellerin</strong>{" "}
-        {language !== "en" ? en.Footer.second : fr.Footer.second}{" "}
+        {language === "en" ? en.Footer.second : fr.Footer.second}{" "}
         <span
           className={
             theme === "dark"
