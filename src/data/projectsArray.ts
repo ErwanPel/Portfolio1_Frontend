@@ -188,9 +188,9 @@ export const arrayProjects: TProjects[] = [
       },
     ],
     description_en:
-      "This project is my first game in Python. The player controls the green snake and the computer is the red snake. To score a point, the player must eat all 10 blue marbles without being touched by the red snake and without leaving the game. Otherwise, the player returns to 0 points. The red snake can also gain points, grow and will try to attack you if you're close to its head.",
+      "This project is my first game in Python. The player controls the green snake and the computer is the red snake. To score a point, the player must eat all 10 blue marbles without being touched by the red snake, without eating itself and without leaving the game. Otherwise, the player returns to 0 points. The red snake can also gain points, grow and will try to attack you if you're close to its head.",
     description_fr:
-      "Ce projet est mon premier jeu en Python. Le joueur contrôle le serpent vert et l'ordinateur est le serpent rouge. Pour marquer un point , le joueur doit manger les 10 billes bleues sans se faire toucher par le snake rouge, sans se toucher lui même et sans sortir du cadre du jeu. Autrement, le score du joueur revient à 0 point. Le snake rouge peut aussi gagner des points, grandir et cherchera à vous attaquer si vous êtes proches de sa tête.",
+      "Ce projet est mon premier jeu en Python. Le joueur contrôle le serpent vert et l'ordinateur est le serpent rouge. Pour marquer un point , le joueur doit manger les 10 billes bleues sans se faire toucher par le snake rouge, sans se manger lui même et sans sortir du cadre du jeu. Autrement, le score du joueur revient à 0 point. Le snake rouge peut aussi gagner des points, grandir et cherchera à vous attaquer si vous êtes proches de sa tête.",
     stacks: [
       {
         source: python,
