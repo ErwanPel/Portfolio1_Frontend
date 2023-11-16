@@ -17,7 +17,7 @@
   },
   "Projects": {
     "title": "< Projects />",
-    "head": "Here you can see some of the projects I've created during the course. In addition to the applications' functionalities, I strive to integrate concepts that I consider essential, such as accessibility (WCAG), interactivity and security, into my creations."
+    "head": "Here you can see some of the projects I've created during the course. In addition to the applications' functionalities, I strive to integrate concepts that I consider essential, such as accessibility (WCAG), interactivity, security and a responsive content into my creations. All projects presented are documented in the github."
   },
   "Courses": {
     "title": "< Courses />",
@@ -60,7 +60,7 @@
     "error": "An error has occurred"
   },
   "Footer": {
-    "first": "Created and deployed by ",
+    "first": "Created in TypeScript/React and deployed by ",
     "second": "with"
   },
   "Menu": {

@@ -17,7 +17,7 @@
   },
   "Projects": {
     "title": "< Projets />",
-    "head": "Ici vous pouvez voir quelques projets que j'ai créés durant la formation. En plus des fonctionnalités de l'application, je m'attache à intégrer des concepts qui me semblent indispensables comme l'accessibilité (WCAG), l'interactivité et la sécurité au sein de mes créations."
+    "head": "Ici vous pouvez voir quelques projets que j'ai créés durant la formation. En plus des fonctionnalités de l'application, je m'attache à intégrer des concepts qui me semblent indispensables comme l'accessibilité (WCAG), l'interactivité, la sécurité et un contenu responsive au sein de mes créations. Tous les projets présentés sont documentés dans mon github."
   },
   "Courses": {
     "title": "< Formations />",
@@ -60,7 +60,7 @@
     "error": "Une erreur s'est produite"
   },
   "Footer": {
-    "first": "Créé et déployé par ",
+    "first": "Créé en TypeScript/React et déployé par ",
     "second": "avec"
   },
   "Menu": {
