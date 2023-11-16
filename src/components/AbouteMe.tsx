@@ -17,44 +17,44 @@ import SectionComponents from "./SectionComponents";
 import TitleLevel2 from "./TitleLevel2";
 import { useSelector } from "react-redux";
 import { RootState } from "../features/store";
-import fr from "../translations/en/global.json";
-import en from "../translations/fr/global.json";
+import en from "../translations/en/global.json";
+import fr from "../translations/fr/global.json";
 
 export default function AboutMe() {
   const { theme } = useSelector((store: RootState) => store.theme);
   const { language } = useSelector((store: RootState) => store.language);
   return (
     <SectionComponents>
-      <Title title={language !== "en" ? en.AboutMe.title : fr.AboutMe.title} />
+      <Title title={language === "en" ? en.AboutMe.title : fr.AboutMe.title} />
       <BlocText>
         <p>
-          {language !== "en" ? en.AboutMe.first : fr.AboutMe.first}
-          <strong>{language !== "en" ? en.AboutMe.job : fr.AboutMe.job}</strong>
+          {language === "en" ? en.AboutMe.first : fr.AboutMe.first}
+          <strong>{language === "en" ? en.AboutMe.job : fr.AboutMe.job}</strong>
 
-          {language !== "en" ? en.AboutMe.firstbis : fr.AboutMe.firstbis}
+          {language === "en" ? en.AboutMe.firstbis : fr.AboutMe.firstbis}
         </p>
       </BlocText>
       <BlocText>
         <p>
-          {language !== "en" ? en.AboutMe.second : fr.AboutMe.second}
+          {language === "en" ? en.AboutMe.second : fr.AboutMe.second}
           <a href="https://coder-pour-changer-de-vie.com/formations/">
             <strong className="hover:underline underline-offset-2 decoration-2">
               Vivre du Code
             </strong>{" "}
           </a>{" "}
-          {language !== "en" ? en.AboutMe.secondBis : fr.AboutMe.secondBis}
+          {language === "en" ? en.AboutMe.secondBis : fr.AboutMe.secondBis}
           <a href="https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20reacteur&utm_content=377851505166&gad_source=1&gclid=Cj0KCQjw4vKpBhCZARIsAOKHoWTYa_na93HBD-c9K8ShKsObl08sLxYvEoh9e-yT-Qiic6t9RXcSxbQaAhLBEALw_wcB">
             <strong className="hover:underline underline-offset-2 decoration-2">
               Réacteur
             </strong>{" "}
           </a>
-          {language !== "en" ? en.AboutMe.secondTer : fr.AboutMe.secondTer}
+          {language === "en" ? en.AboutMe.secondTer : fr.AboutMe.secondTer}
         </p>
       </BlocText>
 
       <article className="mt-28">
         <TitleLevel2
-          title={language !== "en" ? en.AboutMe.section : fr.AboutMe.section}
+          title={language === "en" ? en.AboutMe.section : fr.AboutMe.section}
         />
         <div className="flex justify-between flex-col gap-y-6 sm:gap-y-0 sm:flex-row">
           <div>
