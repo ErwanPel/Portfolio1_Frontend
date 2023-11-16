@@ -60,7 +60,7 @@
     "error": "Une erreur s'est produite"
   },
   "Footer": {
-    "first": "Créé en TypeScript/React et déployé par ",
+    "first": "Créé avec TypeScript/React et déployé par ",
     "second": "avec"
   },
   "Menu": {
